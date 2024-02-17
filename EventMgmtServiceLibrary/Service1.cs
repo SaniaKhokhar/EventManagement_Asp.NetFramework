@@ -13,7 +13,27 @@ namespace EventMgmtServiceLibrary
 {
     public class Service1 : IService1
     {
-        const string constr = @"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = EventMgmt;Integrated Security = True;";
+        //const string constr = @"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = EventMgmt;Integrated Security = True;";
+        const string constr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Eventmgnt;Integrated Security=True;";
+
+        public bool DeleteParticipant(int id)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"DELETE from participant WHERE pid = @id"
+                };
+
+                SqlParameter p = new SqlParameter("@id", id);
+                cmd.Parameters.Add(p);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
 
         
         public Participant GetParticipant(int id)
@@ -46,7 +66,7 @@ namespace EventMgmtServiceLibrary
             string query = "SELECT pid,fname,lname FROM participant";
             SqlDataAdapter da = new SqlDataAdapter(query,constr);
             DataSet ds = new DataSet();
-            da.Fill(ds,"paricipants");
+            da.Fill(ds,"participants");
             //throw new NotImplementedException();
             return ds;
         }
