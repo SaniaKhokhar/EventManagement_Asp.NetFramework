@@ -16,24 +16,6 @@ namespace EventMgmtServiceLibrary
         //const string constr = @"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = EventMgmt;Integrated Security = True;";
         const string constr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Eventmgnt;Integrated Security=True;";
 
-        public bool DeleteParticipant(int id)
-        {
-            SqlConnection cnn = new SqlConnection(constr);
-            {
-                cnn.Open();
-                SqlCommand cmd = new SqlCommand
-                {
-                    Connection = cnn,
-                    CommandText = @"DELETE from participant WHERE pid = @id"
-                };
-
-                SqlParameter p = new SqlParameter("@id", id);
-                cmd.Parameters.Add(p);
-
-                int rowsAffected = cmd.ExecuteNonQuery();
-                return rowsAffected > 0;
-            }
-        }
 
         public Participant GetParticipant(int id)
         {
@@ -70,6 +52,77 @@ namespace EventMgmtServiceLibrary
             //throw new NotImplementedException();
             return ds;
         }
-       
+
+        public bool DeleteParticipant(int id)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"DELETE from participant WHERE pid = @id"
+                };
+
+                SqlParameter p = new SqlParameter("@id", id);
+                cmd.Parameters.Add(p);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
+
+        DataSet IService1.GetOrganizers()
+        {
+            string query = "SELECT oid,org_name,org_email FROM organizer";
+            SqlDataAdapter da = new SqlDataAdapter(query, constr);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "orgenizers");
+            
+            return ds;
+        }
+
+        public Organizer GetOrganizer(int id)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = "Select oid, org_name, org_email from orgenizer where oid = @id";
+            SqlParameter p = new SqlParameter("@id", id);
+            cmd.Parameters.Add(p);
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            Organizer org = new Organizer();
+
+            while (reader.Read())
+            {
+                org.OrganizerId = reader.GetInt32(0);
+                org.OrganizerName = reader.GetString(1);
+                org.OrganizerEmail = reader.GetString(2);
+            }
+
+            reader.Close();
+            cnn.Close();
+            return org;
+        }
+
+        public bool DeleteOrganizer(int id)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"DELETE from organizer WHERE oid = @id"
+                };
+
+                SqlParameter p = new SqlParameter("@id", id);
+                cmd.Parameters.Add(p);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
     }
 }
