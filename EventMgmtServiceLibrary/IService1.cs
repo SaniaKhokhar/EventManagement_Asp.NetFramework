@@ -20,8 +20,6 @@ namespace EventMgmtServiceLibrary
 
         [OperationContract]
         bool DeleteParticipant(int id);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         //Venue services
         [OperationContract]
@@ -32,10 +30,7 @@ namespace EventMgmtServiceLibrary
 
         [OperationContract]
         bool DeleteVenue(int id);
-=======
->>>>>>> 6541e3cf421210a3d9f4536b896f519b14c409d7
-=======
->>>>>>> 6541e3cf421210a3d9f4536b896f519b14c409d7
+
     }
 }
 

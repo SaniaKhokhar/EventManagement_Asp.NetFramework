@@ -15,9 +15,6 @@ namespace EventMgmtServiceLibrary
     {
         //const string constr = @"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = EventMgmt;Integrated Security = True;";
         const string constr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Eventmgnt;Integrated Security=True;";
-<<<<<<< HEAD
-=======
-
         public bool DeleteParticipant(int id)
         {
             SqlConnection cnn = new SqlConnection(constr);
@@ -36,7 +33,6 @@ namespace EventMgmtServiceLibrary
                 return rowsAffected > 0;
             }
         }
->>>>>>> 6541e3cf421210a3d9f4536b896f519b14c409d7
 
         public bool DeleteParticipant(int id)
         {
