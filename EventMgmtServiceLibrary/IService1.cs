@@ -11,10 +11,24 @@ namespace EventMgmtServiceLibrary
     [ServiceContract]
     public interface IService1
     {
+        //Participant services
         [OperationContract]
         DataSet GetParticipants();
 
         [OperationContract]
         Participant GetParticipant(int id);
+
+        [OperationContract]
+        bool DeleteParticipant(int id);
+
+        //Venue services
+        [OperationContract]
+        DataSet GetVenues();
+
+        [OperationContract]
+        Venue GetVenue(int id);
+
+        [OperationContract]
+        bool DeleteVenue(int id);
     }
 }
