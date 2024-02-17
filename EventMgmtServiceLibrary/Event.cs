@@ -15,7 +15,7 @@ namespace EventMgmtServiceLibrary
         private DateTime date;
         private TimeSpan start_time;
         private TimeSpan end_time;
-        private Organizer Organizer { get; set; }
+        public Organizer Organizer { get; set; }
         private int oid;
 
         [DataMember]

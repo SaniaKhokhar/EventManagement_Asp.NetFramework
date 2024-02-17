@@ -156,7 +156,9 @@ namespace EventMgmtServiceLibrary
             {
                 org.OrganizerId = reader.GetInt32(0);
                 org.OrganizerName = reader.GetString(1);
-                org.OrganizerEmail = reader.GetString(2);
+                org.OrganizerContact = reader.GetInt32(2);
+                org.OrganizerEmail = reader.GetString(3);
+                
             }
 
             reader.Close();
@@ -175,6 +177,67 @@ namespace EventMgmtServiceLibrary
                 {
                     Connection = cnn,
                     CommandText = @"DELETE from organizer WHERE oid = @id"
+
+                };
+
+                SqlParameter p = new SqlParameter("@id", id);
+                cmd.Parameters.Add(p);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+
+        }
+
+
+        DataSet IService1.GetEvents()
+        {
+            string query = "SELECT eid, event_name, date, start_time, end_time, oid FROM event";
+            SqlDataAdapter da = new SqlDataAdapter(query, constr);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "events");
+
+            return ds;
+        }
+
+        public Event GetEvent(int id)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = "Select eid, event_name, date, start_time, end_time, oid from event where eid = @id";
+            SqlParameter p = new SqlParameter("@id", id);
+            cmd.Parameters.Add(p);
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            Event evnt = new Event();
+
+            while (reader.Read())
+            {
+                evnt.OrganizerId = reader.GetInt32(0);
+                evnt.EventName = reader.GetString(1);
+                evnt.Date = reader.GetDateTime(2);
+                evnt.StartTime = reader.GetTimeSpan(3);
+                evnt.EndTime = reader.GetTimeSpan(4);
+                evnt.OrganizerId = reader.GetInt32(5);
+
+            }
+
+            reader.Close();
+            cnn.Close();
+
+            return evnt;
+        }
+
+        public bool DeleteEvent(int id)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"DELETE from event WHERE eid = @id"
 
                 };
 
