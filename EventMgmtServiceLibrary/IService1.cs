@@ -30,6 +30,16 @@ namespace EventMgmtServiceLibrary
 
         [OperationContract]
         bool DeleteVenue(int id);
+
+        //Venue services
+        [OperationContract]
+        DataSet GetVenues();
+
+        [OperationContract]
+        Venue GetVenue(int id);
+
+        [OperationContract]
+        bool DeleteVenue(int id);
 <<<<<<< HEAD
 
         [OperationContract]
