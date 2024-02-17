@@ -1,0 +1,4 @@
+﻿- need to change contact number datatype
+because int range is not sufficient.
+
+- need to add more methods.. like for insert

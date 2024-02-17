@@ -192,7 +192,9 @@ namespace EventMgmtServiceLibrary
 
         DataSet IService1.GetEvents()
         {
-            string query = "SELECT eid, event_name, date, start_time, end_time, oid FROM event";
+            string query = "SELECT e.eid, e.event_name, e.date, e.start_time, e.end_time, " +
+                "(SELECT org_name FROM Organizer WHERE oid = e.oid) AS org_name " +
+                "FROM Event e";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
             da.Fill(ds, "events");
