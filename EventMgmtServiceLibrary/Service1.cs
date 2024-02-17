@@ -165,5 +165,63 @@ namespace EventMgmtServiceLibrary
             }
             //throw new NotImplementedException();
         }
+
+
+        DataSet IService1.GetOrganizers()
+        {
+            string query = "SELECT oid,org_name,org_email FROM organizer";
+            SqlDataAdapter da = new SqlDataAdapter(query, constr);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "orgenizers");
+            
+            return ds;
+        }
+
+        public Organizer GetOrganizer(int id) 
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = "Select oid, org_name, org_contact, org_email from organizer where oid = @id";
+            SqlParameter p = new SqlParameter("@id", id);
+            cmd.Parameters.Add(p);
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            Organizer org = new Organizer();
+
+            while (reader.Read())
+            {
+                org.OrganizerId = reader.GetInt32(0);
+                org.OrganizerName = reader.GetString(1);
+                org.OrganizerEmail = reader.GetString(2);
+            }
+
+            reader.Close();
+            cnn.Close();
+
+            return org;
+        }
+
+        public bool DeleteOrganizer(int id) 
+        {
+
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"DELETE from organizer WHERE oid = @id"
+
+                };
+
+                SqlParameter p = new SqlParameter("@id", id);
+                cmd.Parameters.Add(p);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+
+        }
     }
 }

@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Event.cs" />
     <Compile Include="IService1.cs" />
+    <Compile Include="Organizer.cs" />
     <Compile Include="Participant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service1.cs" />
