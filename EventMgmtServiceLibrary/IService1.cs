@@ -16,5 +16,9 @@ namespace EventMgmtServiceLibrary
 
         [OperationContract]
         Participant GetParticipant(int id);
+
+        [OperationContract]
+        bool DeleteParticipant(int id);
     }
 }
+
