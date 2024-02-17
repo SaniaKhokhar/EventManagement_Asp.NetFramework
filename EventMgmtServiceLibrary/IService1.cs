@@ -31,17 +31,7 @@ namespace EventMgmtServiceLibrary
         [OperationContract]
         bool DeleteVenue(int id);
 
-        //Venue services
-        [OperationContract]
-        DataSet GetVenues();
-
-        [OperationContract]
-        Venue GetVenue(int id);
-
-        [OperationContract]
-        bool DeleteVenue(int id);
-<<<<<<< HEAD
-
+        //Organizer services
         [OperationContract]
         DataSet GetOrganizers();
 
@@ -50,8 +40,6 @@ namespace EventMgmtServiceLibrary
 
         [OperationContract]
         bool DeleteOrganizer(int id);
-=======
->>>>>>> 5ce38c263403f41e1ae47d2d855e0b1c5dc6d2c3
     }
 }
 
