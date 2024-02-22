@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace EventMgmtServiceLibrary
 {
+    [DataContract]
     public class Event
     {
         private int eid;
@@ -14,7 +15,6 @@ namespace EventMgmtServiceLibrary
         private DateTime date;
         private TimeSpan start_time;
         private TimeSpan end_time;
-        private Organizer Organizer { get; set; }
         private int oid;
 
         [DataMember]

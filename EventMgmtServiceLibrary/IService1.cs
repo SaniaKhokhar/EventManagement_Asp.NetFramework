@@ -40,6 +40,16 @@ namespace EventMgmtServiceLibrary
 
         [OperationContract]
         bool DeleteOrganizer(int id);
+
+        //Event services
+        [OperationContract]
+        DataSet GetEvents();
+
+        [OperationContract]
+        Event GetEvent(int id);
+
+        [OperationContract]
+        bool DeleteEvent(int id);
     }
 }
 
