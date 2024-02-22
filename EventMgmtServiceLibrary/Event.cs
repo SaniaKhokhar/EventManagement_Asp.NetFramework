@@ -15,8 +15,12 @@ namespace EventMgmtServiceLibrary
         private DateTime date;
         private TimeSpan start_time;
         private TimeSpan end_time;
+
         public Organizer Organizer { get; set; }
         private int oid;
+
+        public Venue Venue { get; set; }
+        private int vid;
 
         [DataMember]
         public int EventId
@@ -58,6 +62,13 @@ namespace EventMgmtServiceLibrary
         {
             get { return oid; }
             set { oid = value; }
+        }
+
+        [DataMember]
+        public int VenueId
+        {
+            get { return vid; }
+            set { vid = value; }
         }
     }
 }

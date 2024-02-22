@@ -50,6 +50,16 @@ namespace EventMgmtServiceLibrary
 
         [OperationContract]
         bool DeleteEvent(int id);
+
+        // Event Regitration
+        [OperationContract]
+        DataSet GetRegistrations();
+
+        [OperationContract]
+        Registration GetRegistration(int id);
+
+        [OperationContract]
+        bool DeleteRegistration(int id);
     }
 }
 
