@@ -14,46 +14,9 @@ namespace EventMgmtServiceLibrary
     public class Service1 : IService1
     {
         //const string constr = @"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = EventMgmt;Integrated Security = True;";
-        const string constr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Eventmgnt;Integrated Security=True;";
-        public bool DeleteParticipant(int id)
-        {
-            SqlConnection cnn = new SqlConnection(constr);
-            {
-                cnn.Open();
-                SqlCommand cmd = new SqlCommand
-                {
-                    Connection = cnn,
-                    CommandText = @"DELETE from participant WHERE pid = @id"
-                };
+        const string constr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EventMgmt;Integrated Security=True;";
 
-                SqlParameter p = new SqlParameter("@id", id);
-                cmd.Parameters.Add(p);
 
-                int rowsAffected = cmd.ExecuteNonQuery();
-                return rowsAffected > 0;
-            }
-        }
-
-        public bool DeleteParticipant(int id)
-        {
-            SqlConnection cnn = new SqlConnection(constr);
-            {
-                cnn.Open();
-                SqlCommand cmd = new SqlCommand
-                {
-                    Connection = cnn,
-                    CommandText = @"DELETE from participant WHERE pid = @id"
-                };
-
-                SqlParameter p = new SqlParameter("@id", id);
-                cmd.Parameters.Add(p);
-
-                int rowsAffected = cmd.ExecuteNonQuery();
-                return rowsAffected > 0;
-            }
-        }
-
-        
         public Participant GetParticipant(int id)
         {
             SqlConnection cnn = new SqlConnection(constr);
@@ -82,9 +45,9 @@ namespace EventMgmtServiceLibrary
         DataSet IService1.GetParticipants()
         {
             string query = "SELECT pid,fname,lname FROM participant";
-            SqlDataAdapter da = new SqlDataAdapter(query,constr);
+            SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
-            da.Fill(ds,"participants");
+            da.Fill(ds, "participants");
             //throw new NotImplementedException();
             return ds;
         }
@@ -173,11 +136,11 @@ namespace EventMgmtServiceLibrary
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
             da.Fill(ds, "orgenizers");
-            
+
             return ds;
         }
 
-        public Organizer GetOrganizer(int id) 
+        public Organizer GetOrganizer(int id)
         {
             SqlConnection cnn = new SqlConnection(constr);
             SqlCommand cmd = new SqlCommand();
@@ -195,7 +158,7 @@ namespace EventMgmtServiceLibrary
                 org.OrganizerName = reader.GetString(1);
                 org.OrganizerContact = reader.GetInt32(2);
                 org.OrganizerEmail = reader.GetString(3);
-                
+
             }
 
             reader.Close();
@@ -204,7 +167,7 @@ namespace EventMgmtServiceLibrary
             return org;
         }
 
-        public bool DeleteOrganizer(int id) 
+        public bool DeleteOrganizer(int id)
         {
 
             SqlConnection cnn = new SqlConnection(constr);
@@ -229,7 +192,10 @@ namespace EventMgmtServiceLibrary
 
         DataSet IService1.GetEvents()
         {
-            string query = "SELECT eid, event_name, date, start_time, end_time, oid FROM event";
+            string query = "SELECT e.eid, e.event_name, e.date, e.start_time, e.end_time, " +
+                "(SELECT org_name FROM Organizer WHERE oid = e.oid), " +
+                "(SELECT venue_name FROM Venue WHERE vid = e.vid) " +
+                "FROM Event e";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
             da.Fill(ds, "events");
@@ -285,6 +251,68 @@ namespace EventMgmtServiceLibrary
                 return rowsAffected > 0;
             }
 
+        }
+
+        DataSet IService1.GetRegistrations()
+        {
+            string query = "SELECT r.rid , " +
+                "(SELECT fname FROM Participant WHERE pid = r.pid), " +
+                "(SELECT event_name FROM Event WHERE eid = r.eid), " +
+                " r.reg_date, r.fees " +
+                "FROM Registration r";
+            SqlDataAdapter da = new SqlDataAdapter(query, constr);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "registrations");
+
+            return ds;
+        }
+
+        public Registration GetRegistration(int id)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cnn;
+            cmd.CommandText = "Select rid, pid, eid, reg_date, fees from registration where rid = @id";
+            SqlParameter p = new SqlParameter("@id", id);
+            cmd.Parameters.Add(p);
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            Registration reg = new Registration();
+
+            while (reader.Read())
+            {
+                reg.RegistrationId = reader.GetInt32(0);
+                reg.ParticipantId = reader.GetInt32(1);
+                reg.EventId = reader.GetInt32(2);
+                reg.RegistrationDate = reader.GetDateTime(3);
+                reg.Fees = reader.GetInt32(4);
+
+            }
+
+            reader.Close();
+            cnn.Close();
+
+            return reg;
+        }
+
+        public bool DeleteRegistration(int id)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"DELETE from registration WHERE rid = @id"
+
+                };
+
+                SqlParameter p = new SqlParameter("@id", id);
+                cmd.Parameters.Add(p);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
         }
     }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="fc41098f-38f1-4135-9416-1e8299a9c261" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="0d3c3197-2e29-45d8-a4be-275dca9adb64" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="aea37ed3-4b82-4096-b643-9469fe15f426" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="f9ecb7ef-c6e7-4f56-8232-209c308319eb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="9d155680-2fe2-4c70-84a9-c64f9d37fa51" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
+    <MetadataFile FileName="EventMgmtServiceLibrary.xsd" MetadataType="Schema" ID="c59e5906-9adb-4b93-8701-c4c1ab30805c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
