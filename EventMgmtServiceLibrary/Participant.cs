@@ -13,7 +13,7 @@ namespace EventMgmtServiceLibrary
         private int pid;
         private string fname;
         private string lname;
-        private int mob_no;
+        private long mob_no;
         private string email;
 
         [DataMember]
@@ -36,7 +36,7 @@ namespace EventMgmtServiceLibrary
         }
 
         [DataMember]
-        public int MobileNo
+        public long MobileNo
         {
             get { return mob_no; }
             set { mob_no = value; }

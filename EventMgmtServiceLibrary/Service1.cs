@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace EventMgmtServiceLibrary
@@ -16,6 +20,30 @@ namespace EventMgmtServiceLibrary
         //const string constr = @"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = EventMgmt;Integrated Security = True;";
         const string constr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EventMgmt;Integrated Security=True;";
 
+        public bool AddParticipant(string fname, string lname, long mob_no, string email)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"INSERT into participant (fname,lname,mob_no,email) values (@fname, @lname, @mob_no, @email)",
+                };
+                SqlParameter p1 = new SqlParameter("@fname", fname);
+                cmd.Parameters.Add(p1);
+                SqlParameter p2 = new SqlParameter("@lname", lname);
+                cmd.Parameters.Add(p2);
+                SqlParameter p3 = new SqlParameter("@mob_no", mob_no);
+                cmd.Parameters.Add(p3);
+                SqlParameter p4 = new SqlParameter("@email", email);
+                cmd.Parameters.Add(p4);
+
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
 
         public Participant GetParticipant(int id)
         {
@@ -71,10 +99,31 @@ namespace EventMgmtServiceLibrary
             }
         }
 
-
+        //Venues 
+        public bool AddVenue(string venue_name, string location, int capacity)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"INSERT into venue (venue_name,location,capacity) values (@venue_name, @location, @capacity)",
+                };
+                SqlParameter p1 = new SqlParameter("@venue_name", venue_name);
+                cmd.Parameters.Add(p1);
+                SqlParameter p2 = new SqlParameter("@location", location);
+                cmd.Parameters.Add(p2);
+                SqlParameter p3 = new SqlParameter("@capacity", capacity);
+                cmd.Parameters.Add(p3);
+             
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
         public DataSet GetVenues()
         {
-            //throw new NotImplementedException();
+        //throw new NotImplementedException();
             string query = "SELECT vid,venue_name, location, capacity FROM venue";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
@@ -128,7 +177,29 @@ namespace EventMgmtServiceLibrary
             }
             //throw new NotImplementedException();
         }
+        
+       public bool AddOrganizer(string org_name, long org_contact, string org_email)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"INSERT into organizer (org_name,org_contact,org_email) values (@org_name, @org_contact, @org_email)",
+                };
+                SqlParameter p1 = new SqlParameter("@org_name", org_name);
+                cmd.Parameters.Add(p1);
+                SqlParameter p2 = new SqlParameter("@org_contact", org_contact);
+                cmd.Parameters.Add(p2);               
+                SqlParameter p3 = new SqlParameter("@org_email", org_email);
+                cmd.Parameters.Add(p3);
 
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+       }
 
         DataSet IService1.GetOrganizers()
         {
@@ -189,7 +260,34 @@ namespace EventMgmtServiceLibrary
 
         }
 
+        public bool AddEvent(string event_name, DateTime date, TimeSpan start_time, TimeSpan end_time, int oid, int vid)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"INSERT into event (event_name,date,start_time,end_time,oid,vid) values (@event_name, @date,@start_time, @end_time, @oid, @vid)",
+                };
+                SqlParameter p1 = new SqlParameter("@event_name", event_name);
+                cmd.Parameters.Add(p1);
+                SqlParameter p2 = new SqlParameter("@date", date);
+                cmd.Parameters.Add(p2);
+                SqlParameter p3 = new SqlParameter("@start_time", start_time);
+                cmd.Parameters.Add(p3);
+                SqlParameter p4 = new SqlParameter("@end_time", end_time);
+                cmd.Parameters.Add(p4);
+                SqlParameter p5 = new SqlParameter("@oid", oid);
+                cmd.Parameters.Add(p5);
+                SqlParameter p6 = new SqlParameter("@vid", vid);
+                cmd.Parameters.Add(p6);
 
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
         DataSet IService1.GetEvents()
         {
             string query = "SELECT e.eid, e.event_name, e.date, e.start_time, e.end_time, " +
@@ -253,6 +351,30 @@ namespace EventMgmtServiceLibrary
 
         }
 
+        public bool AddRegistration(int pid, int eid, DateTime reg_date, int fees)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"INSERT into registration (pid,eid, reg_date,fees) values (@pid, @eid, @reg_date, @fees)",
+                };
+                SqlParameter p1 = new SqlParameter("@pid", pid);
+                cmd.Parameters.Add(p1);
+                SqlParameter p2 = new SqlParameter("@eid", eid);
+                cmd.Parameters.Add(p2);
+                SqlParameter p3 = new SqlParameter("@reg_date", reg_date);
+                cmd.Parameters.Add(p3);
+                SqlParameter p4 = new SqlParameter("@fees", fees);
+                cmd.Parameters.Add(p4);
+
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
         DataSet IService1.GetRegistrations()
         {
             string query = "SELECT r.rid , " +

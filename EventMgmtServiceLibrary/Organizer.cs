@@ -12,7 +12,7 @@ namespace EventMgmtServiceLibrary
     {
         private int oid;
         private String org_name;
-        private int org_contact;
+        private long org_contact;
         private String org_email;
 
         [DataMember]
@@ -30,7 +30,7 @@ namespace EventMgmtServiceLibrary
         }
 
         [DataMember]
-        public int OrganizerContact
+        public long OrganizerContact
         {
             get { return org_contact; }
             set { org_contact = value; }
