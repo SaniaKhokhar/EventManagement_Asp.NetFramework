@@ -72,7 +72,7 @@ namespace EventMgmtServiceLibrary
 
         DataSet IService1.GetParticipants()
         {
-            string query = "SELECT pid,fname,lname FROM participant";
+            string query = "SELECT fname as First_Name,lname as Last_Name, email as Email, mob_no as Mobile_No FROM participant";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
             da.Fill(ds, "participants");
@@ -124,7 +124,7 @@ namespace EventMgmtServiceLibrary
         public DataSet GetVenues()
         {
         //throw new NotImplementedException();
-            string query = "SELECT vid,venue_name, location, capacity FROM venue";
+            string query = "SELECT venue_name as Venue_Name, location as Location, capacity as Capacity FROM venue";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
             da.Fill(ds, "venues");
@@ -203,10 +203,10 @@ namespace EventMgmtServiceLibrary
 
         DataSet IService1.GetOrganizers()
         {
-            string query = "SELECT oid,org_name,org_email FROM organizer";
+            string query = "SELECT org_name as Name,org_email as Email FROM organizer";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
-            da.Fill(ds, "orgenizers");
+            da.Fill(ds, "organizers");
 
             return ds;
         }
@@ -290,9 +290,9 @@ namespace EventMgmtServiceLibrary
         }
         DataSet IService1.GetEvents()
         {
-            string query = "SELECT e.eid, e.event_name, e.date, e.start_time, e.end_time, " +
-                "(SELECT org_name FROM Organizer WHERE oid = e.oid), " +
-                "(SELECT venue_name FROM Venue WHERE vid = e.vid) " +
+            string query = "SELECT e.event_name as Event_Name, e.date as Date, e.start_time as Start_Time, e.end_time as End_Time, " +
+                "(SELECT org_name FROM Organizer WHERE oid = e.oid) as Organizer, " +
+                "(SELECT venue_name FROM Venue WHERE vid = e.vid) as Venue " +
                 "FROM Event e";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
@@ -377,9 +377,9 @@ namespace EventMgmtServiceLibrary
         }
         DataSet IService1.GetRegistrations()
         {
-            string query = "SELECT r.rid , " +
-                "(SELECT fname FROM Participant WHERE pid = r.pid), " +
-                "(SELECT event_name FROM Event WHERE eid = r.eid), " +
+            string query = "SELECT " +
+                "(SELECT fname FROM Participant WHERE pid = r.pid) as Name, " +
+                "(SELECT event_name FROM Event WHERE eid = r.eid) as Event, " +
                 " r.reg_date, r.fees " +
                 "FROM Registration r";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
