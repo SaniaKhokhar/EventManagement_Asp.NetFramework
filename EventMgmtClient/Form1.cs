@@ -21,9 +21,15 @@ namespace EventMgmtClient
         {
             ServiceReference1.Service1Client client1 = new EventMgmtClient.ServiceReference1.Service1Client("WSDualHttpBinding_IService1");
             EventMgmtClient.ServiceReference1.Participant part = client1.GetParticipant(3);
-            label1.Text = part.ParticipantfName;
+            //label1.Text = part.ParticipantfName;
             client1.Close();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
 }
+
