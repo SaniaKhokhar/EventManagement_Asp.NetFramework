@@ -4,7 +4,7 @@
   <xs:complexType name="Participant">
     <xs:sequence>
       <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MobileNo" type="xs:int" />
+      <xs:element minOccurs="0" name="MobileNo" type="xs:long" />
       <xs:element minOccurs="0" name="ParticipantId" type="xs:int" />
       <xs:element minOccurs="0" name="ParticipantfName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ParticipantlName" nillable="true" type="xs:string" />
@@ -22,7 +22,7 @@
   <xs:element name="Venue" nillable="true" type="tns:Venue" />
   <xs:complexType name="Organizer">
     <xs:sequence>
-      <xs:element minOccurs="0" name="OrganizerContact" type="xs:int" />
+      <xs:element minOccurs="0" name="OrganizerContact" type="xs:long" />
       <xs:element minOccurs="0" name="OrganizerEmail" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OrganizerId" type="xs:int" />
       <xs:element minOccurs="0" name="OrganizerName" nillable="true" type="xs:string" />

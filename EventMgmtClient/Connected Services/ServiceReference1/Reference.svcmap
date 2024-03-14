@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="fc41098f-38f1-4135-9416-1e8299a9c261" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="905cdfa1-3ae9-4e17-bb57-14a185ec8bd4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="0d3c3197-2e29-45d8-a4be-275dca9adb64" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="aea37ed3-4b82-4096-b643-9469fe15f426" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="f9ecb7ef-c6e7-4f56-8232-209c308319eb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
-    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="9d155680-2fe2-4c70-84a9-c64f9d37fa51" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
-    <MetadataFile FileName="EventMgmtServiceLibrary.xsd" MetadataType="Schema" ID="c59e5906-9adb-4b93-8701-c4c1ab30805c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="fc3bd36f-28a2-4a88-a56d-ff64c7ac51c8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0d090be5-a5a5-4927-970e-5b2af2020927" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ba5c4273-53a3-4c2e-8c9c-d2aff2aa1ef3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="0c54b391-66c6-471c-9b6a-1b1bcde8054a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
+    <MetadataFile FileName="EventMgmtServiceLibrary.xsd" MetadataType="Schema" ID="309f0f29-28ba-4e3f-ad0a-86a8cc3e2e55" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/EventMgmtServiceLibrary/Service1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

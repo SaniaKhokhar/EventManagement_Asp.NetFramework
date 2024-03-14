@@ -1,6 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://schemas.datacontract.org/2004/07/EventMgmtServiceLibrary" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="AddParticipant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mob_no" type="xs:long" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddParticipantResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddParticipantResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetParticipants">
     <xs:complexType>
       <xs:sequence />
@@ -50,6 +68,22 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="DeleteParticipantResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddVenue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="venue_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="capacity" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddVenueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddVenueResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -105,6 +139,22 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AddOrganizer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="org_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="org_contact" type="xs:long" />
+        <xs:element minOccurs="0" name="org_email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrganizerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddOrganizerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetOrganizers">
     <xs:complexType>
       <xs:sequence />
@@ -157,6 +207,25 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AddEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="event_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="start_time" type="q4:duration" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="end_time" type="q5:duration" />
+        <xs:element minOccurs="0" name="oid" type="xs:int" />
+        <xs:element minOccurs="0" name="vid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddEventResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetEvents">
     <xs:complexType>
       <xs:sequence />
@@ -191,7 +260,7 @@
   <xs:element name="GetEventResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EventMgmtServiceLibrary" minOccurs="0" name="GetEventResult" nillable="true" type="q4:Event" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EventMgmtServiceLibrary" minOccurs="0" name="GetEventResult" nillable="true" type="q6:Event" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -206,6 +275,23 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="DeleteEventResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRegistration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pid" type="xs:int" />
+        <xs:element minOccurs="0" name="eid" type="xs:int" />
+        <xs:element minOccurs="0" name="reg_date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fees" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRegistrationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddRegistrationResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -243,7 +329,7 @@
   <xs:element name="GetRegistrationResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EventMgmtServiceLibrary" minOccurs="0" name="GetRegistrationResult" nillable="true" type="q5:Registration" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EventMgmtServiceLibrary" minOccurs="0" name="GetRegistrationResult" nillable="true" type="q7:Registration" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

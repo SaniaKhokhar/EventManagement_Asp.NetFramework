@@ -26,7 +26,7 @@ namespace EventMgmtClient.ServiceReference1 {
         private string EmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int MobileNoField;
+        private long MobileNoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int ParticipantIdField;
@@ -61,7 +61,7 @@ namespace EventMgmtClient.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int MobileNo {
+        public long MobileNo {
             get {
                 return this.MobileNoField;
             }
@@ -225,7 +225,7 @@ namespace EventMgmtClient.ServiceReference1 {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int OrganizerContactField;
+        private long OrganizerContactField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string OrganizerEmailField;
@@ -247,7 +247,7 @@ namespace EventMgmtClient.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int OrganizerContact {
+        public long OrganizerContact {
             get {
                 return this.OrganizerContactField;
             }
@@ -562,6 +562,12 @@ namespace EventMgmtClient.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddParticipant", ReplyAction="http://tempuri.org/IService1/AddParticipantResponse")]
+        bool AddParticipant(string fname, string lname, long mob_no, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddParticipant", ReplyAction="http://tempuri.org/IService1/AddParticipantResponse")]
+        System.Threading.Tasks.Task<bool> AddParticipantAsync(string fname, string lname, long mob_no, string email);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetParticipants", ReplyAction="http://tempuri.org/IService1/GetParticipantsResponse")]
         System.Data.DataSet GetParticipants();
         
@@ -579,6 +585,12 @@ namespace EventMgmtClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteParticipant", ReplyAction="http://tempuri.org/IService1/DeleteParticipantResponse")]
         System.Threading.Tasks.Task<bool> DeleteParticipantAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddVenue", ReplyAction="http://tempuri.org/IService1/AddVenueResponse")]
+        bool AddVenue(string venue_name, string location, int capacity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddVenue", ReplyAction="http://tempuri.org/IService1/AddVenueResponse")]
+        System.Threading.Tasks.Task<bool> AddVenueAsync(string venue_name, string location, int capacity);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetVenues", ReplyAction="http://tempuri.org/IService1/GetVenuesResponse")]
         System.Data.DataSet GetVenues();
@@ -598,6 +610,12 @@ namespace EventMgmtClient.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteVenue", ReplyAction="http://tempuri.org/IService1/DeleteVenueResponse")]
         System.Threading.Tasks.Task<bool> DeleteVenueAsync(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddOrganizer", ReplyAction="http://tempuri.org/IService1/AddOrganizerResponse")]
+        bool AddOrganizer(string org_name, long org_contact, string org_email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddOrganizer", ReplyAction="http://tempuri.org/IService1/AddOrganizerResponse")]
+        System.Threading.Tasks.Task<bool> AddOrganizerAsync(string org_name, long org_contact, string org_email);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOrganizers", ReplyAction="http://tempuri.org/IService1/GetOrganizersResponse")]
         System.Data.DataSet GetOrganizers();
         
@@ -616,6 +634,12 @@ namespace EventMgmtClient.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteOrganizer", ReplyAction="http://tempuri.org/IService1/DeleteOrganizerResponse")]
         System.Threading.Tasks.Task<bool> DeleteOrganizerAsync(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddEvent", ReplyAction="http://tempuri.org/IService1/AddEventResponse")]
+        bool AddEvent(string event_name, System.DateTime date, System.TimeSpan start_time, System.TimeSpan end_time, int oid, int vid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddEvent", ReplyAction="http://tempuri.org/IService1/AddEventResponse")]
+        System.Threading.Tasks.Task<bool> AddEventAsync(string event_name, System.DateTime date, System.TimeSpan start_time, System.TimeSpan end_time, int oid, int vid);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEvents", ReplyAction="http://tempuri.org/IService1/GetEventsResponse")]
         System.Data.DataSet GetEvents();
         
@@ -633,6 +657,12 @@ namespace EventMgmtClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteEvent", ReplyAction="http://tempuri.org/IService1/DeleteEventResponse")]
         System.Threading.Tasks.Task<bool> DeleteEventAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddRegistration", ReplyAction="http://tempuri.org/IService1/AddRegistrationResponse")]
+        bool AddRegistration(int pid, int eid, System.DateTime reg_date, int fees);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddRegistration", ReplyAction="http://tempuri.org/IService1/AddRegistrationResponse")]
+        System.Threading.Tasks.Task<bool> AddRegistrationAsync(int pid, int eid, System.DateTime reg_date, int fees);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRegistrations", ReplyAction="http://tempuri.org/IService1/GetRegistrationsResponse")]
         System.Data.DataSet GetRegistrations();
@@ -680,6 +710,14 @@ namespace EventMgmtClient.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
+        public bool AddParticipant(string fname, string lname, long mob_no, string email) {
+            return base.Channel.AddParticipant(fname, lname, mob_no, email);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddParticipantAsync(string fname, string lname, long mob_no, string email) {
+            return base.Channel.AddParticipantAsync(fname, lname, mob_no, email);
+        }
+        
         public System.Data.DataSet GetParticipants() {
             return base.Channel.GetParticipants();
         }
@@ -702,6 +740,14 @@ namespace EventMgmtClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> DeleteParticipantAsync(int id) {
             return base.Channel.DeleteParticipantAsync(id);
+        }
+        
+        public bool AddVenue(string venue_name, string location, int capacity) {
+            return base.Channel.AddVenue(venue_name, location, capacity);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddVenueAsync(string venue_name, string location, int capacity) {
+            return base.Channel.AddVenueAsync(venue_name, location, capacity);
         }
         
         public System.Data.DataSet GetVenues() {
@@ -728,6 +774,14 @@ namespace EventMgmtClient.ServiceReference1 {
             return base.Channel.DeleteVenueAsync(id);
         }
         
+        public bool AddOrganizer(string org_name, long org_contact, string org_email) {
+            return base.Channel.AddOrganizer(org_name, org_contact, org_email);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddOrganizerAsync(string org_name, long org_contact, string org_email) {
+            return base.Channel.AddOrganizerAsync(org_name, org_contact, org_email);
+        }
+        
         public System.Data.DataSet GetOrganizers() {
             return base.Channel.GetOrganizers();
         }
@@ -752,6 +806,14 @@ namespace EventMgmtClient.ServiceReference1 {
             return base.Channel.DeleteOrganizerAsync(id);
         }
         
+        public bool AddEvent(string event_name, System.DateTime date, System.TimeSpan start_time, System.TimeSpan end_time, int oid, int vid) {
+            return base.Channel.AddEvent(event_name, date, start_time, end_time, oid, vid);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddEventAsync(string event_name, System.DateTime date, System.TimeSpan start_time, System.TimeSpan end_time, int oid, int vid) {
+            return base.Channel.AddEventAsync(event_name, date, start_time, end_time, oid, vid);
+        }
+        
         public System.Data.DataSet GetEvents() {
             return base.Channel.GetEvents();
         }
@@ -774,6 +836,14 @@ namespace EventMgmtClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> DeleteEventAsync(int id) {
             return base.Channel.DeleteEventAsync(id);
+        }
+        
+        public bool AddRegistration(int pid, int eid, System.DateTime reg_date, int fees) {
+            return base.Channel.AddRegistration(pid, eid, reg_date, fees);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddRegistrationAsync(int pid, int eid, System.DateTime reg_date, int fees) {
+            return base.Channel.AddRegistrationAsync(pid, eid, reg_date, fees);
         }
         
         public System.Data.DataSet GetRegistrations() {

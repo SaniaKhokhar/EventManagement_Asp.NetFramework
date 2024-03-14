@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace EventMgmtClient
 {
-    public partial class Form2 : Form1
+    public partial class Organizer : Form
     {
-        public Form2()
+        public Organizer()
         {
             InitializeComponent();
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

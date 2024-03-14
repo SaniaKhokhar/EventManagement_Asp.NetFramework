@@ -1,6 +1,6 @@
 ﻿namespace EventMgmtClient
 {
-    partial class Form1
+    partial class Event
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // Event
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1150, 805);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ClientSize = new System.Drawing.Size(1357, 897);
+            this.Name = "Event";
+            this.Text = "Event";
             this.ResumeLayout(false);
 
         }
@@ -45,4 +44,3 @@
         #endregion
     }
 }
-
