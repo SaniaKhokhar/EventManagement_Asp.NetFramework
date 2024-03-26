@@ -72,7 +72,7 @@ namespace EventMgmtServiceLibrary
 
         DataSet IService1.GetParticipants()
         {
-            string query = "SELECT fname as First_Name,lname as Last_Name, email as Email, mob_no as Mobile_No FROM participant";
+            string query = "SELECT pid as Id, fname as First_Name,lname as Last_Name, email as Email, mob_no as Mobile_No FROM participant";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
             da.Fill(ds, "participants");
@@ -84,6 +84,7 @@ namespace EventMgmtServiceLibrary
         {
             SqlConnection cnn = new SqlConnection(constr);
             {
+                /*
                 cnn.Open();
                 SqlCommand cmd = new SqlCommand
                 {
@@ -95,6 +96,44 @@ namespace EventMgmtServiceLibrary
                 cmd.Parameters.Add(p);
 
                 int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }*/
+
+                cnn.Open();
+
+                // Check if there are any associated registrations
+                SqlCommand checkCmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"SELECT COUNT(*) FROM Registration WHERE pid = @id"
+                };
+                checkCmd.Parameters.AddWithValue("@id", id);
+                int registrationCount = (int)checkCmd.ExecuteScalar();
+
+                if (registrationCount > 0)
+                {
+                    // If there are associated registrations, you might want to handle this situation.
+                    // For example, you could delete the associated registrations or update foreign key references.
+
+                    // Example: Deleting associated registrations
+                    SqlCommand deleteRegistrationsCmd = new SqlCommand
+                    {
+                        Connection = cnn,
+                        CommandText = @"DELETE FROM Registration WHERE pid = @id"
+                    };
+                    deleteRegistrationsCmd.Parameters.AddWithValue("@id", id);
+                    deleteRegistrationsCmd.ExecuteNonQuery();
+                }
+
+                // Now, delete the participant record
+                SqlCommand deleteParticipantCmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"DELETE FROM participant WHERE pid = @id"
+                };
+                deleteParticipantCmd.Parameters.AddWithValue("@id", id);
+                int rowsAffected = deleteParticipantCmd.ExecuteNonQuery();
+
                 return rowsAffected > 0;
             }
         }

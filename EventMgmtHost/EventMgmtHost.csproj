@@ -33,8 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EventMgmtServiceLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="EventMgmtServiceLibrary">
       <HintPath>..\EventMgmtServiceLibrary\bin\Debug\EventMgmtServiceLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />

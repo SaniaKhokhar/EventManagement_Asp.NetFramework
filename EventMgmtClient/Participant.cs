@@ -24,21 +24,101 @@ namespace EventMgmtClient
 
         ServiceReference1.Service1Client client = new ServiceReference1.Service1Client("WSDualHttpBinding_IService1");
         void ShowParticipant()
-        {
-            
-           /* ParticipantDG.DataSource = client.GetParticipants();
-            ParticipantDG.DataBind;*/
-
+        { 
             DataSet ds = new DataSet();
             ds = client.GetParticipants();
             ParticipantDG.DataSource = ds.Tables[0];
         }
+        private void ClearTextBoxes()
+        {
+            tbfname.Text = "";
+            tblname.Text = "";
+            tbemail.Text = "";
+            tbmob_no.Text = "";
+        }
         private void addParticipant_Click(object sender, EventArgs e)
         {
-           bool res =  client.AddParticipant(tbfname.Text,tblname.Text,Convert.ToInt64(tbmob_no.Text),tbemail.Text);
+            try
+            {
+                if (tbfname.Text == "" || tblname.Text == "" || tbemail.Text == "" || tbmob_no.Text == "")
+                {
+                    ErrMsg.Text = "Missing Data!!";
+                }
+                else
+                {
+                    bool res = client.AddParticipant(tbfname.Text, tblname.Text, Convert.ToInt64(tbmob_no.Text), tbemail.Text);
+                    ShowParticipant();
+                    if (res)
+                    {
+                        ErrMsg.Text = "Participant Added!!";
+                        ClearTextBoxes();
+                    }
+                    else
+                    {
+                        ErrMsg.Text = "Participant Not Added!!";
+                    }
+                }
+            }
+            catch(Exception ex) {
+                ErrMsg.Text = ex.Message;
+            }
         }
 
-       
+        DataGridViewRow selectedRow;
+        private void Participant_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0 && e.RowIndex < ParticipantDG.Rows.Count)
+                {
+                    selectedRow = ParticipantDG.Rows[e.RowIndex];
+                    tbfname.Text = selectedRow.Cells[1].Value.ToString();
+                    tblname.Text = selectedRow.Cells[2].Value.ToString();
+                    tbemail.Text = selectedRow.Cells[3].Value.ToString();
+                    tbmob_no.Text = selectedRow.Cells[4].Value.ToString();
+                }
+                else
+                {
+                    ClearTextBoxes();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }        
+        private void deleteParticipant_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tbfname.Text == "" || tblname.Text == "" || tbemail.Text == "" || tbmob_no.Text == "")
+                {
+                    ErrMsg.Text = "Missing Data!!";
+                }
+                else
+                {
+                   
+                    bool res = client.DeleteParticipant(Convert.ToInt32(selectedRow.Cells[0].Value));
+                    Console.WriteLine(selectedRow.Index);
+                    ShowParticipant();
+                    if (res)
+                    {
+                        ErrMsg.Text = "Participant Deleted!!";
+                        ClearTextBoxes();  
+                    }
+                    else
+                    {
+                        ErrMsg.Text = "Not deleted";
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ErrMsg.Text = ex.Message;
+            }
+        }
+
     }
 }
 
