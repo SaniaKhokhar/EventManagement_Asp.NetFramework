@@ -36,6 +36,30 @@ namespace EventMgmtClient
             tbemail.Text = "";
             tbmob_no.Text = "";
         }
+
+        DataGridViewRow selectedRow;
+        private void Participant_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0 && e.RowIndex < ParticipantDG.Rows.Count)
+                {
+                    selectedRow = ParticipantDG.Rows[e.RowIndex];
+                    tbfname.Text = selectedRow.Cells[1].Value.ToString();
+                    tblname.Text = selectedRow.Cells[2].Value.ToString();
+                    tbemail.Text = selectedRow.Cells[3].Value.ToString();
+                    tbmob_no.Text = selectedRow.Cells[4].Value.ToString();
+                }
+                else
+                {
+                    ClearTextBoxes();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
         private void addParticipant_Click(object sender, EventArgs e)
         {
             try
@@ -63,30 +87,7 @@ namespace EventMgmtClient
                 ErrMsg.Text = ex.Message;
             }
         }
-
-        DataGridViewRow selectedRow;
-        private void Participant_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (e.RowIndex >= 0 && e.RowIndex < ParticipantDG.Rows.Count)
-                {
-                    selectedRow = ParticipantDG.Rows[e.RowIndex];
-                    tbfname.Text = selectedRow.Cells[1].Value.ToString();
-                    tblname.Text = selectedRow.Cells[2].Value.ToString();
-                    tbemail.Text = selectedRow.Cells[3].Value.ToString();
-                    tbmob_no.Text = selectedRow.Cells[4].Value.ToString();
-                }
-                else
-                {
-                    ClearTextBoxes();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }        
+       
         private void deleteParticipant_Click(object sender, EventArgs e)
         {
             try
@@ -97,9 +98,7 @@ namespace EventMgmtClient
                 }
                 else
                 {
-                   
                     bool res = client.DeleteParticipant(Convert.ToInt32(selectedRow.Cells[0].Value));
-                    Console.WriteLine(selectedRow.Index);
                     ShowParticipant();
                     if (res)
                     {
@@ -119,6 +118,12 @@ namespace EventMgmtClient
             }
         }
 
+        private void btnvenue_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Venue venue = new Venue();
+            venue.ShowDialog();
+        }
     }
 }
 

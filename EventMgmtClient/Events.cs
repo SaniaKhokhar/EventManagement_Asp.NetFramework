@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EventMgmtClient
 {
-    public partial class Event : Form
+    public partial class Events : Form
     {
-        public Event()
+        public Events()
         {
             InitializeComponent();
         }

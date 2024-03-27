@@ -43,10 +43,10 @@
             this.ParticipantDG = new System.Windows.Forms.DataGridView();
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ErrMsg = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnvenue = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ParticipantDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).BeginInit();
@@ -157,7 +157,7 @@
             this.ParticipantDG.Name = "ParticipantDG";
             this.ParticipantDG.RowHeadersWidth = 62;
             this.ParticipantDG.RowTemplate.Height = 28;
-            this.ParticipantDG.Size = new System.Drawing.Size(812, 448);
+            this.ParticipantDG.Size = new System.Drawing.Size(766, 448);
             this.ParticipantDG.TabIndex = 11;
             this.ParticipantDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Participant_CellClick);
             // 
@@ -170,21 +170,11 @@
             this.dataSetBindingSource.DataSource = typeof(System.Data.DataSet);
             this.dataSetBindingSource.Position = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(654, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(507, 46);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Event Management System";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(806, 80);
+            this.label2.Location = new System.Drawing.Point(800, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 37);
             this.label2.TabIndex = 13;
@@ -202,14 +192,24 @@
             // 
             this.bindingSource1.DataSource = typeof(EventMgmtClient.ServiceReference1.Participant);
             // 
+            // btnvenue
+            // 
+            this.btnvenue.Location = new System.Drawing.Point(89, 69);
+            this.btnvenue.Name = "btnvenue";
+            this.btnvenue.Size = new System.Drawing.Size(131, 48);
+            this.btnvenue.TabIndex = 0;
+            this.btnvenue.Text = "Venue";
+            this.btnvenue.UseVisualStyleBackColor = true;
+            this.btnvenue.Click += new System.EventHandler(this.btnvenue_Click);
+            // 
             // Participant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1685, 842);
+            this.Controls.Add(this.btnvenue);
             this.Controls.Add(this.ErrMsg);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.ParticipantDG);
             this.Controls.Add(this.tbmob_no);
             this.Controls.Add(this.tbemail);
@@ -223,7 +223,9 @@
             this.Controls.Add(this.deleteParticipant);
             this.Controls.Add(this.addParticipant);
             this.Name = "Participant";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Participant";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Participant_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ParticipantDG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
@@ -254,11 +256,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgmob_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgemail;
         private System.Windows.Forms.BindingSource participantBindingSource;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label ErrMsg;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.BindingSource bindingSource2;
+        private System.Windows.Forms.Button btnvenue;
     }
 }
 

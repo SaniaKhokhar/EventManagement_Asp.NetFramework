@@ -1,6 +1,6 @@
 ﻿namespace EventMgmtClient
 {
-    partial class Event
+    partial class Events
     {
         /// <summary>
         /// Required designer variable.

@@ -53,17 +53,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Event.cs">
+    <Compile Include="Events.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Event.Designer.cs">
-      <DependentUpon>Event.cs</DependentUpon>
+    <Compile Include="Events.Designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
     </Compile>
     <Compile Include="EventRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EventRegistration.Designer.cs">
       <DependentUpon>EventRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Organizer.cs">
       <SubType>Form</SubType>
@@ -85,11 +91,14 @@
     <Compile Include="Venue.Designer.cs">
       <DependentUpon>Venue.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Event.resx">
-      <DependentUpon>Event.cs</DependentUpon>
+    <EmbeddedResource Include="Events.resx">
+      <DependentUpon>Events.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventRegistration.resx">
       <DependentUpon>EventRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Organizer.resx">
       <DependentUpon>Organizer.cs</DependentUpon>
