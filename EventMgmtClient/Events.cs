@@ -104,7 +104,11 @@ namespace EventMgmtClient
                 }
                 else
                 {
-                    bool res = client.AddEvent(tbevent_name.Text, Convert.ToDateTime(dateTimePicker1), tbstart_time.Text, tbend_time.Text, 1003,1002);
+                    DateTime date;
+                    DateTime.TryParse(dateTimePicker1.Text, out date);
+
+                    //Convert.ToDateTime(dateTimePicker1)
+                    bool res = client.AddEvent(tbevent_name.Text, date , tbstart_time.Text, tbend_time.Text, 1003,1002);
                     ShowEvents();
                     if (res)
                     {
