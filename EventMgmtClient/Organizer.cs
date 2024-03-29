@@ -94,7 +94,12 @@ namespace EventMgmtClient
         {
             try
             {
-                if (tborgname.Text == "" || tbcontactno.Text == "" || tbemail.Text == "")
+                DataGridViewRow selectedRow = OrganizerDG.CurrentRow;
+                if (selectedRow == null)
+                {
+                    ErrMsg.Text = "Please select a row to delete.";
+                }
+                else if (tborgname.Text == "" || tbcontactno.Text == "" || tbemail.Text == "")
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }

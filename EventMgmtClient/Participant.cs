@@ -124,6 +124,11 @@ namespace EventMgmtClient
             Venue venue = new Venue();
             venue.ShowDialog();
         }
+
+        private void tblname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

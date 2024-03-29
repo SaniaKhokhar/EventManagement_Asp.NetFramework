@@ -46,18 +46,18 @@
             // ErrMsg
             // 
             this.ErrMsg.AutoSize = true;
-            this.ErrMsg.Location = new System.Drawing.Point(502, 731);
+            this.ErrMsg.Location = new System.Drawing.Point(446, 585);
             this.ErrMsg.Name = "ErrMsg";
-            this.ErrMsg.Size = new System.Drawing.Size(0, 20);
+            this.ErrMsg.Size = new System.Drawing.Size(0, 16);
             this.ErrMsg.TabIndex = 30;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(812, 80);
+            this.label2.Location = new System.Drawing.Point(395, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 36);
+            this.label2.Size = new System.Drawing.Size(82, 31);
             this.label2.TabIndex = 29;
             this.label2.Text = "Venue";
             // 
@@ -73,45 +73,49 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.VenueDG.DefaultCellStyle = dataGridViewCellStyle1;
-            this.VenueDG.Location = new System.Drawing.Point(923, 221);
+            this.VenueDG.Location = new System.Drawing.Point(800, 150);
+            this.VenueDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VenueDG.Name = "VenueDG";
             this.VenueDG.RowHeadersWidth = 62;
             this.VenueDG.RowTemplate.Height = 28;
-            this.VenueDG.Size = new System.Drawing.Size(678, 448);
+            this.VenueDG.Size = new System.Drawing.Size(800, 400);
             this.VenueDG.TabIndex = 27;
             this.VenueDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VenueDG_CellClick);
             // 
             // tbcapacity
             // 
-            this.tbcapacity.Location = new System.Drawing.Point(636, 414);
+            this.tbcapacity.Location = new System.Drawing.Point(565, 331);
+            this.tbcapacity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbcapacity.MinimumSize = new System.Drawing.Size(4, 50);
             this.tbcapacity.Name = "tbcapacity";
-            this.tbcapacity.Size = new System.Drawing.Size(196, 50);
+            this.tbcapacity.Size = new System.Drawing.Size(175, 22);
             this.tbcapacity.TabIndex = 25;
             // 
             // tblocation
             // 
-            this.tblocation.Location = new System.Drawing.Point(636, 323);
+            this.tblocation.Location = new System.Drawing.Point(565, 258);
+            this.tblocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblocation.Multiline = true;
             this.tblocation.Name = "tblocation";
-            this.tblocation.Size = new System.Drawing.Size(196, 47);
+            this.tblocation.Size = new System.Drawing.Size(175, 38);
             this.tblocation.TabIndex = 24;
             // 
             // tbvenuename
             // 
-            this.tbvenuename.Location = new System.Drawing.Point(636, 239);
+            this.tbvenuename.Location = new System.Drawing.Point(565, 191);
+            this.tbvenuename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbvenuename.MinimumSize = new System.Drawing.Size(4, 50);
             this.tbvenuename.Name = "tbvenuename";
-            this.tbvenuename.Size = new System.Drawing.Size(196, 50);
+            this.tbvenuename.Size = new System.Drawing.Size(175, 50);
             this.tbvenuename.TabIndex = 23;
             // 
             // capacity
             // 
             this.capacity.AutoSize = true;
             this.capacity.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.capacity.Location = new System.Drawing.Point(447, 414);
+            this.capacity.Location = new System.Drawing.Point(397, 331);
             this.capacity.Name = "capacity";
-            this.capacity.Size = new System.Drawing.Size(80, 22);
+            this.capacity.Size = new System.Drawing.Size(68, 19);
             this.capacity.TabIndex = 21;
             this.capacity.Text = "Capacity";
             // 
@@ -119,9 +123,9 @@
             // 
             this.location.AutoSize = true;
             this.location.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.location.Location = new System.Drawing.Point(447, 326);
+            this.location.Location = new System.Drawing.Point(397, 261);
             this.location.Name = "location";
-            this.location.Size = new System.Drawing.Size(79, 22);
+            this.location.Size = new System.Drawing.Size(70, 19);
             this.location.TabIndex = 20;
             this.location.Text = "Location";
             // 
@@ -129,9 +133,9 @@
             // 
             this.venue_name.AutoSize = true;
             this.venue_name.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.venue_name.Location = new System.Drawing.Point(447, 242);
+            this.venue_name.Location = new System.Drawing.Point(397, 194);
             this.venue_name.Name = "venue_name";
-            this.venue_name.Size = new System.Drawing.Size(108, 22);
+            this.venue_name.Size = new System.Drawing.Size(94, 19);
             this.venue_name.TabIndex = 19;
             this.venue_name.Text = "Venue Name";
             // 
@@ -140,9 +144,10 @@
             this.deleteVenue.BackColor = System.Drawing.Color.Red;
             this.deleteVenue.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteVenue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteVenue.Location = new System.Drawing.Point(682, 585);
+            this.deleteVenue.Location = new System.Drawing.Point(655, 419);
+            this.deleteVenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteVenue.Name = "deleteVenue";
-            this.deleteVenue.Size = new System.Drawing.Size(96, 59);
+            this.deleteVenue.Size = new System.Drawing.Size(85, 47);
             this.deleteVenue.TabIndex = 17;
             this.deleteVenue.Text = "Delete";
             this.deleteVenue.UseVisualStyleBackColor = false;
@@ -153,9 +158,10 @@
             this.addVenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.addVenue.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addVenue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addVenue.Location = new System.Drawing.Point(494, 585);
+            this.addVenue.Location = new System.Drawing.Point(534, 419);
+            this.addVenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addVenue.Name = "addVenue";
-            this.addVenue.Size = new System.Drawing.Size(96, 59);
+            this.addVenue.Size = new System.Drawing.Size(85, 47);
             this.addVenue.TabIndex = 16;
             this.addVenue.Text = "Add";
             this.addVenue.UseVisualStyleBackColor = false;
@@ -163,9 +169,9 @@
             // 
             // Venue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1694, 897);
+            this.ClientSize = new System.Drawing.Size(1482, 753);
             this.Controls.Add(this.ErrMsg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.VenueDG);

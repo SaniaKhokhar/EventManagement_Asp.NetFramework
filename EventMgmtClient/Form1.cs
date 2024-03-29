@@ -20,35 +20,55 @@ namespace EventMgmtClient
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            Participant participant = new Participant();
-            participant.ShowDialog();
+            Participant participantForm = new Participant();
+            participantForm.ShowDialog();
         }
+
+        private void btnparticipant_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Participant participantForm = new Participant();
+            participantForm.ShowDialog();
+            //this.Show();
+        }
+
         private void btnvenue_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Venue venue = new Venue();
-            venue.ShowDialog();
+            Venue venueForm = new Venue();
+            venueForm.ShowDialog();
+            //this.Show();
         }
 
         private void btnorganizer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Organizer org = new Organizer();
-            org.ShowDialog();
+            Organizer orgForm = new Organizer();
+            orgForm.ShowDialog();
+            //this.Show();
         }
 
         private void btnevent_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Events events = new Events();
-            events.ShowDialog();
+            Events eventsForm = new Events();
+            eventsForm.ShowDialog();
+            //this.Show();
         }
         private void btnreg_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EventRegistration reg = new EventRegistration();
-            reg.ShowDialog();
+            EventRegistration regForm = new EventRegistration();
+            regForm.ShowDialog();
+            //this.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 
 }

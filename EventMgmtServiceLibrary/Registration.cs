@@ -11,10 +11,12 @@ namespace EventMgmtServiceLibrary
     public class Registration
     {
         private int rid;
+
         public Participant Participant { get; set; }
         private int pid;
         public Event Event { get; set; }
         private int eid;
+
         private DateTime reg_date;
         private int fees;
 

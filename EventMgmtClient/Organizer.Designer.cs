@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ErrMsg = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.OrganizerDG = new System.Windows.Forms.DataGridView();
@@ -46,18 +46,18 @@
             // ErrMsg
             // 
             this.ErrMsg.AutoSize = true;
-            this.ErrMsg.Location = new System.Drawing.Point(514, 741);
+            this.ErrMsg.Location = new System.Drawing.Point(457, 593);
             this.ErrMsg.Name = "ErrMsg";
-            this.ErrMsg.Size = new System.Drawing.Size(0, 20);
+            this.ErrMsg.Size = new System.Drawing.Size(0, 16);
             this.ErrMsg.TabIndex = 45;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(824, 90);
+            this.label2.Location = new System.Drawing.Point(428, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 36);
+            this.label2.Size = new System.Drawing.Size(120, 31);
             this.label2.TabIndex = 44;
             this.label2.Text = "Organizer";
             // 
@@ -65,52 +65,56 @@
             // 
             this.OrganizerDG.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.OrganizerDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OrganizerDG.DefaultCellStyle = dataGridViewCellStyle1;
-            this.OrganizerDG.Location = new System.Drawing.Point(964, 220);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrganizerDG.DefaultCellStyle = dataGridViewCellStyle3;
+            this.OrganizerDG.Location = new System.Drawing.Point(857, 176);
+            this.OrganizerDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OrganizerDG.Name = "OrganizerDG";
             this.OrganizerDG.RowHeadersWidth = 62;
             this.OrganizerDG.RowTemplate.Height = 28;
-            this.OrganizerDG.Size = new System.Drawing.Size(541, 448);
+            this.OrganizerDG.Size = new System.Drawing.Size(800, 400);
             this.OrganizerDG.TabIndex = 42;
             this.OrganizerDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrganizerDG_CellClick);
             // 
             // tbemail
             // 
-            this.tbemail.Location = new System.Drawing.Point(673, 424);
+            this.tbemail.Location = new System.Drawing.Point(598, 339);
+            this.tbemail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbemail.MinimumSize = new System.Drawing.Size(4, 50);
             this.tbemail.Name = "tbemail";
-            this.tbemail.Size = new System.Drawing.Size(196, 50);
+            this.tbemail.Size = new System.Drawing.Size(175, 22);
             this.tbemail.TabIndex = 41;
             // 
             // tbcontactno
             // 
-            this.tbcontactno.Location = new System.Drawing.Point(673, 333);
+            this.tbcontactno.Location = new System.Drawing.Point(598, 266);
+            this.tbcontactno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbcontactno.Name = "tbcontactno";
-            this.tbcontactno.Size = new System.Drawing.Size(196, 26);
+            this.tbcontactno.Size = new System.Drawing.Size(175, 22);
             this.tbcontactno.TabIndex = 40;
             // 
             // tborgname
             // 
-            this.tborgname.Location = new System.Drawing.Point(673, 249);
+            this.tborgname.Location = new System.Drawing.Point(598, 199);
+            this.tborgname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tborgname.MinimumSize = new System.Drawing.Size(4, 50);
             this.tborgname.Name = "tborgname";
-            this.tborgname.Size = new System.Drawing.Size(196, 50);
+            this.tborgname.Size = new System.Drawing.Size(175, 22);
             this.tborgname.TabIndex = 39;
             // 
             // org_email
             // 
             this.org_email.AutoSize = true;
             this.org_email.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.org_email.Location = new System.Drawing.Point(484, 424);
+            this.org_email.Location = new System.Drawing.Point(430, 339);
             this.org_email.Name = "org_email";
-            this.org_email.Size = new System.Drawing.Size(57, 22);
+            this.org_email.Size = new System.Drawing.Size(49, 19);
             this.org_email.TabIndex = 38;
             this.org_email.Text = "Email";
             // 
@@ -118,9 +122,9 @@
             // 
             this.org_contact.AutoSize = true;
             this.org_contact.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.org_contact.Location = new System.Drawing.Point(484, 336);
+            this.org_contact.Location = new System.Drawing.Point(430, 269);
             this.org_contact.Name = "org_contact";
-            this.org_contact.Size = new System.Drawing.Size(102, 22);
+            this.org_contact.Size = new System.Drawing.Size(88, 19);
             this.org_contact.TabIndex = 37;
             this.org_contact.Text = "Mobile No.";
             // 
@@ -128,9 +132,9 @@
             // 
             this.org_name.AutoSize = true;
             this.org_name.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.org_name.Location = new System.Drawing.Point(484, 252);
+            this.org_name.Location = new System.Drawing.Point(430, 202);
             this.org_name.Name = "org_name";
-            this.org_name.Size = new System.Drawing.Size(88, 22);
+            this.org_name.Size = new System.Drawing.Size(76, 19);
             this.org_name.TabIndex = 36;
             this.org_name.Text = "Organizer";
             // 
@@ -139,9 +143,10 @@
             this.deleteOrganizer.BackColor = System.Drawing.Color.Red;
             this.deleteOrganizer.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteOrganizer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteOrganizer.Location = new System.Drawing.Point(719, 595);
+            this.deleteOrganizer.Location = new System.Drawing.Point(688, 452);
+            this.deleteOrganizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteOrganizer.Name = "deleteOrganizer";
-            this.deleteOrganizer.Size = new System.Drawing.Size(96, 59);
+            this.deleteOrganizer.Size = new System.Drawing.Size(85, 47);
             this.deleteOrganizer.TabIndex = 34;
             this.deleteOrganizer.Text = "Delete";
             this.deleteOrganizer.UseVisualStyleBackColor = false;
@@ -152,9 +157,10 @@
             this.addOrganizer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.addOrganizer.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addOrganizer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addOrganizer.Location = new System.Drawing.Point(531, 595);
+            this.addOrganizer.Location = new System.Drawing.Point(575, 452);
+            this.addOrganizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addOrganizer.Name = "addOrganizer";
-            this.addOrganizer.Size = new System.Drawing.Size(96, 59);
+            this.addOrganizer.Size = new System.Drawing.Size(85, 47);
             this.addOrganizer.TabIndex = 33;
             this.addOrganizer.Text = "Add";
             this.addOrganizer.UseVisualStyleBackColor = false;
@@ -162,10 +168,10 @@
             // 
             // Organizer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1745, 897);
+            this.ClientSize = new System.Drawing.Size(1482, 753);
             this.Controls.Add(this.ErrMsg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.OrganizerDG);
