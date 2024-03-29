@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace EventMgmtClient
 {
-    public partial class Participant : Form
+    public partial class Participant : Form1
     {
         public Participant()
         {

@@ -42,7 +42,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(64, 147);
+            this.linkLabel1.Location = new System.Drawing.Point(73, 182);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(96, 22);
             this.linkLabel1.TabIndex = 35;
@@ -63,9 +63,9 @@
             // btnorganizer
             // 
             this.btnorganizer.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnorganizer.Location = new System.Drawing.Point(409, 120);
+            this.btnorganizer.Location = new System.Drawing.Point(68, 397);
             this.btnorganizer.Name = "btnorganizer";
-            this.btnorganizer.Size = new System.Drawing.Size(113, 49);
+            this.btnorganizer.Size = new System.Drawing.Size(194, 49);
             this.btnorganizer.TabIndex = 32;
             this.btnorganizer.Text = "Organizer";
             this.btnorganizer.UseVisualStyleBackColor = true;
@@ -74,9 +74,9 @@
             // btnvenue
             // 
             this.btnvenue.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvenue.Location = new System.Drawing.Point(230, 120);
+            this.btnvenue.Location = new System.Drawing.Point(68, 255);
             this.btnvenue.Name = "btnvenue";
-            this.btnvenue.Size = new System.Drawing.Size(113, 49);
+            this.btnvenue.Size = new System.Drawing.Size(194, 49);
             this.btnvenue.TabIndex = 36;
             this.btnvenue.Text = "Venue";
             this.btnvenue.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             // btnreg
             // 
             this.btnreg.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreg.Location = new System.Drawing.Point(760, 120);
+            this.btnreg.Location = new System.Drawing.Point(68, 663);
             this.btnreg.Name = "btnreg";
             this.btnreg.Size = new System.Drawing.Size(194, 49);
             this.btnreg.TabIndex = 37;
@@ -96,9 +96,9 @@
             // btnevent
             // 
             this.btnevent.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnevent.Location = new System.Drawing.Point(584, 120);
+            this.btnevent.Location = new System.Drawing.Point(68, 536);
             this.btnevent.Name = "btnevent";
-            this.btnevent.Size = new System.Drawing.Size(113, 49);
+            this.btnevent.Size = new System.Drawing.Size(194, 49);
             this.btnevent.TabIndex = 38;
             this.btnevent.Text = "Event";
             this.btnevent.UseVisualStyleBackColor = true;

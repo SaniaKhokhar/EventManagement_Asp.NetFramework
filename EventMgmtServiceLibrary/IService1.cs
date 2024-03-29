@@ -51,7 +51,7 @@ namespace EventMgmtServiceLibrary
 
         //Event services
         [OperationContract]
-        bool AddEvent(string event_name, DateTime date, TimeSpan start_time, TimeSpan end_time,int oid, int vid);
+        bool AddEvent(string event_name, DateTime date, string start_time, string  end_time,int oid, int vid);
         [OperationContract]
         DataSet GetEvents();
 

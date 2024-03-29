@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace EventMgmtClient
 {
-    public partial class Venue : Form
+    public partial class Venue : Form1
     {
         public Venue()
         {
@@ -121,18 +121,6 @@ namespace EventMgmtClient
             }
         }
 
-        private void linkLabel1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Participant participant = new Participant();
-            participant.ShowDialog();
-        }
-
-        private void btnorganizer_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Organizer org = new Organizer();
-            org.ShowDialog();
-        }
+        
     }
 }

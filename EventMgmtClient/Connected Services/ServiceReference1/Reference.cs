@@ -321,7 +321,7 @@ namespace EventMgmtClient.ServiceReference1 {
         private System.DateTime DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.TimeSpan EndTimeField;
+        private string EndTimeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int EventIdField;
@@ -333,7 +333,7 @@ namespace EventMgmtClient.ServiceReference1 {
         private int OrganizerIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.TimeSpan StartTimeField;
+        private string StartTimeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int VenueIdField;
@@ -362,12 +362,12 @@ namespace EventMgmtClient.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.TimeSpan EndTime {
+        public string EndTime {
             get {
                 return this.EndTimeField;
             }
             set {
-                if ((this.EndTimeField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.EndTimeField, value) != true)) {
                     this.EndTimeField = value;
                     this.RaisePropertyChanged("EndTime");
                 }
@@ -414,12 +414,12 @@ namespace EventMgmtClient.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.TimeSpan StartTime {
+        public string StartTime {
             get {
                 return this.StartTimeField;
             }
             set {
-                if ((this.StartTimeField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.StartTimeField, value) != true)) {
                     this.StartTimeField = value;
                     this.RaisePropertyChanged("StartTime");
                 }
@@ -635,10 +635,10 @@ namespace EventMgmtClient.ServiceReference1 {
         System.Threading.Tasks.Task<bool> DeleteOrganizerAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddEvent", ReplyAction="http://tempuri.org/IService1/AddEventResponse")]
-        bool AddEvent(string event_name, System.DateTime date, System.TimeSpan start_time, System.TimeSpan end_time, int oid, int vid);
+        bool AddEvent(string event_name, System.DateTime date, string start_time, string end_time, int oid, int vid);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddEvent", ReplyAction="http://tempuri.org/IService1/AddEventResponse")]
-        System.Threading.Tasks.Task<bool> AddEventAsync(string event_name, System.DateTime date, System.TimeSpan start_time, System.TimeSpan end_time, int oid, int vid);
+        System.Threading.Tasks.Task<bool> AddEventAsync(string event_name, System.DateTime date, string start_time, string end_time, int oid, int vid);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEvents", ReplyAction="http://tempuri.org/IService1/GetEventsResponse")]
         System.Data.DataSet GetEvents();
@@ -806,11 +806,11 @@ namespace EventMgmtClient.ServiceReference1 {
             return base.Channel.DeleteOrganizerAsync(id);
         }
         
-        public bool AddEvent(string event_name, System.DateTime date, System.TimeSpan start_time, System.TimeSpan end_time, int oid, int vid) {
+        public bool AddEvent(string event_name, System.DateTime date, string start_time, string end_time, int oid, int vid) {
             return base.Channel.AddEvent(event_name, date, start_time, end_time, oid, vid);
         }
         
-        public System.Threading.Tasks.Task<bool> AddEventAsync(string event_name, System.DateTime date, System.TimeSpan start_time, System.TimeSpan end_time, int oid, int vid) {
+        public System.Threading.Tasks.Task<bool> AddEventAsync(string event_name, System.DateTime date, string start_time, string end_time, int oid, int vid) {
             return base.Channel.AddEventAsync(event_name, date, start_time, end_time, oid, vid);
         }
         

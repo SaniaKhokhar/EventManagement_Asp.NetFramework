@@ -13,8 +13,8 @@ namespace EventMgmtServiceLibrary
         private int eid;
         private string event_name;
         private DateTime date;
-        private TimeSpan start_time;
-        private TimeSpan end_time;
+        private String start_time;
+        private String end_time;
         public Organizer Organizer { get; set; }
         private int oid;
 
@@ -43,14 +43,14 @@ namespace EventMgmtServiceLibrary
         }
 
         [DataMember]
-        public TimeSpan StartTime
+        public String StartTime
         {
             get { return start_time; }
             set { start_time = value; }
         }
 
         [DataMember]
-        public TimeSpan EndTime
+        public String EndTime
         {
             get { return end_time; }
             set { end_time = value; }

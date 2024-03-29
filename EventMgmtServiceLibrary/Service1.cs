@@ -299,10 +299,10 @@ namespace EventMgmtServiceLibrary
 
         }
 
-        public bool AddEvent(string event_name, DateTime date, TimeSpan start_time, TimeSpan end_time, int oid, int vid)
+        public bool AddEvent(string event_name, DateTime date, string start_time, string end_time, int oid, int vid)
         {
             SqlConnection cnn = new SqlConnection(constr);
-            {
+            {   
                 cnn.Open();
                 SqlCommand cmd = new SqlCommand
                 {
@@ -321,7 +321,6 @@ namespace EventMgmtServiceLibrary
                 cmd.Parameters.Add(p5);
                 SqlParameter p6 = new SqlParameter("@vid", vid);
                 cmd.Parameters.Add(p6);
-
 
                 int rowsAffected = cmd.ExecuteNonQuery();
                 return rowsAffected > 0;
@@ -357,8 +356,10 @@ namespace EventMgmtServiceLibrary
                 evnt.OrganizerId = reader.GetInt32(0);
                 evnt.EventName = reader.GetString(1);
                 evnt.Date = reader.GetDateTime(2);
-                evnt.StartTime = reader.GetTimeSpan(3);
-                evnt.EndTime = reader.GetTimeSpan(4);
+                evnt.StartTime = reader.GetString(3);
+                evnt.EndTime = reader.GetString(4);
+                /*evnt.StartTime = reader.GetTimeSpan(3);
+                evnt.EndTime = reader.GetTimeSpan(4);*/
                 evnt.OrganizerId = reader.GetInt32(5);
 
             }
