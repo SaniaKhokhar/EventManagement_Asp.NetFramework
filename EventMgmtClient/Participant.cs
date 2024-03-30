@@ -88,7 +88,7 @@ namespace EventMgmtClient
                 }
             }
             catch(Exception ex) {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
        
@@ -96,12 +96,11 @@ namespace EventMgmtClient
         {
             try
             {
-                DataGridViewRow selectedRow = ParticipantDG.CurrentRow;
                 if (selectedRow == null)
                 {
-                    ErrMsg.Text = "Please select a row to delete.";
+                    MessageBox.Show("Please select a row to Delete.");
                 }
-                if (tbfname.Text == "" || tblname.Text == "" || tbemail.Text == "" || tbmob_no.Text == "")
+                else if (tbfname.Text == "" || tblname.Text == "" || tbemail.Text == "" || tbmob_no.Text == "")
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }
@@ -123,7 +122,7 @@ namespace EventMgmtClient
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -133,7 +132,11 @@ namespace EventMgmtClient
         {
             try
             {
-                if (tbfname.Text == "" || tblname.Text == "" || tbemail.Text == "" || tbmob_no.Text == "")
+                if (selectedRow == null)
+                {
+                    MessageBox.Show("Please select a row to Update.");
+                }
+                else if (tbfname.Text == "" || tblname.Text == "" || tbemail.Text == "" || tbmob_no.Text == "")
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }
@@ -156,7 +159,7 @@ namespace EventMgmtClient
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
     }

@@ -296,7 +296,7 @@ namespace EventMgmtServiceLibrary
 
         DataSet IService1.GetOrganizers()
         {
-            string query = "SELECT oid as Id, org_name as Name,org_email as Email, org_contact as Contact_No FROM organizer";
+            string query = "SELECT oid as Id, org_name as Name, org_contact as Contact_No, org_email as Email FROM organizer";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
             da.Fill(ds, "organizers");
@@ -377,6 +377,7 @@ namespace EventMgmtServiceLibrary
                 return rowsAffected > 0;
             }
         }
+
         public bool AddEvent(string event_name, DateTime date, string start_time, string end_time, int oid, int vid)
         {
             SqlConnection cnn = new SqlConnection(constr);

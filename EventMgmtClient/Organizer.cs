@@ -98,10 +98,9 @@ namespace EventMgmtClient
         {
             try
             {
-                DataGridViewRow selectedRow = OrganizerDG.CurrentRow;
                 if (selectedRow == null)
                 {
-                    ErrMsg.Text = "Please select a row to delete.";
+                    MessageBox.Show("Please select a row to Delete.");
                 }
                 else if (tborgname.Text == "" || tbcontactno.Text == "" || tbemail.Text == "")
                 {
@@ -115,7 +114,7 @@ namespace EventMgmtClient
 
                     if (res)
                     {
-                        ErrMsg.Text = "Organizer Deleted Successfully!!";
+                        ErrMsg.Text = "Organizer Deleted!!";
                         ClearTextBoxes();
                     }
                     else
@@ -127,15 +126,20 @@ namespace EventMgmtClient
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void updateParticipant_Click(object sender, EventArgs e)
+
+        private void updateOrganizer_Click(object sender, EventArgs e)
         {
             try
             {
-                if (tborgname.Text == "" || tbcontactno.Text == "" || tbemail.Text == "")
+                if (selectedRow == null)
+                {
+                    MessageBox.Show("Please select a row to Update.");
+                }
+                else if (tborgname.Text == "" || tbcontactno.Text == "" || tbemail.Text == "")
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }
@@ -158,7 +162,7 @@ namespace EventMgmtClient
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
     }

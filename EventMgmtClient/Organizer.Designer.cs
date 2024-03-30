@@ -40,7 +40,7 @@
             this.org_name = new System.Windows.Forms.Label();
             this.deleteOrganizer = new System.Windows.Forms.Button();
             this.addOrganizer = new System.Windows.Forms.Button();
-            this.updateParticipant = new System.Windows.Forms.Button();
+            this.updateOrganizer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OrganizerDG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,19 +167,19 @@
             this.addOrganizer.UseVisualStyleBackColor = false;
             this.addOrganizer.Click += new System.EventHandler(this.addOrganizer_Click);
             // 
-            // updateParticipant
+            // updateOrganizer
             // 
-            this.updateParticipant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.updateParticipant.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateParticipant.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.updateParticipant.Location = new System.Drawing.Point(577, 453);
-            this.updateParticipant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.updateParticipant.Name = "updateParticipant";
-            this.updateParticipant.Size = new System.Drawing.Size(85, 47);
-            this.updateParticipant.TabIndex = 46;
-            this.updateParticipant.Text = "Update";
-            this.updateParticipant.UseVisualStyleBackColor = false;
-            this.updateParticipant.Click += new System.EventHandler(this.updateParticipant_Click);
+            this.updateOrganizer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.updateOrganizer.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateOrganizer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.updateOrganizer.Location = new System.Drawing.Point(577, 453);
+            this.updateOrganizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateOrganizer.Name = "updateOrganizer";
+            this.updateOrganizer.Size = new System.Drawing.Size(85, 47);
+            this.updateOrganizer.TabIndex = 46;
+            this.updateOrganizer.Text = "Update";
+            this.updateOrganizer.UseVisualStyleBackColor = false;
+            this.updateOrganizer.Click += new System.EventHandler(this.updateOrganizer_Click);
             // 
             // Organizer
             // 
@@ -187,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1482, 753);
-            this.Controls.Add(this.updateParticipant);
+            this.Controls.Add(this.updateOrganizer);
             this.Controls.Add(this.ErrMsg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.OrganizerDG);
@@ -215,7 +215,7 @@
             this.Controls.SetChildIndex(this.OrganizerDG, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.ErrMsg, 0);
-            this.Controls.SetChildIndex(this.updateParticipant, 0);
+            this.Controls.SetChildIndex(this.updateOrganizer, 0);
             ((System.ComponentModel.ISupportInitialize)(this.OrganizerDG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -234,6 +234,6 @@
         private System.Windows.Forms.Label org_name;
         private System.Windows.Forms.Button deleteOrganizer;
         private System.Windows.Forms.Button addOrganizer;
-        private System.Windows.Forms.Button updateParticipant;
+        private System.Windows.Forms.Button updateOrganizer;
     }
 }

@@ -116,37 +116,49 @@ namespace EventMgmtClient
         {
             try
             {
-                Object selectedOrg = cmborg.SelectedValue;
-                int orgID;
-                int.TryParse(selectedOrg.ToString(), out orgID);
-
-                Object selectedVenue = cmbvenue.SelectedValue;
-                int venueID;
-                int.TryParse(selectedVenue.ToString(), out venueID);
-
-                if (tbevent_name.Text == "" || orgID < 0 || venueID < 0)
-                {
-                    ErrMsg.Text = "Missing Data!!";
+                if(selectedRow == null){
+                    MessageBox.Show("Please select a row to Delete");
                 }
                 else
                 {
-                    bool res = client.DeleteEvent(Convert.ToInt32(selectedRow.Cells[0].Value));
-                    ShowEvents();
-                    if (res)
+                    if(cmborg.SelectedItem == null || cmbvenue.SelectedItem == null)
                     {
-                        ErrMsg.Text = "Event Deleted!!";
-                        ClearTextBoxes();
+                        MessageBox.Show("Please select a Item from Drop Down");
                     }
-                    else
-                    {
-                        ErrMsg.Text = "Not deleted";
-                    }
-                }
+                    else {
+                        Object selectedOrg = cmborg.SelectedValue;
+                        int orgID;
+                        int.TryParse(selectedOrg.ToString(), out orgID);
 
+                        Object selectedVenue = cmbvenue.SelectedValue;
+                        int venueID;
+                        int.TryParse(selectedVenue.ToString(), out venueID);
+
+                        if (tbevent_name.Text == "" || orgID < 0 || venueID < 0)
+                        {
+                            ErrMsg.Text = "Missing Data!!";
+                        }
+                        else
+                        {
+                            bool res = client.DeleteEvent(Convert.ToInt32(selectedRow.Cells[0].Value));
+                            ShowEvents();
+                            if (res)
+                            {
+                                ErrMsg.Text = "Event Deleted!!";
+                                ClearTextBoxes();
+                            }
+                            else
+                            {
+                                ErrMsg.Text = "Event Not Deleted";
+                            }
+                        }
+                    }
+
+                }
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -154,39 +166,55 @@ namespace EventMgmtClient
         {
             try
             {
-                Object selectedOrg = cmborg.SelectedValue;
-                int orgID;
-                int.TryParse(selectedOrg.ToString(), out orgID);
-
-                Object selectedVenue = cmbvenue.SelectedValue;
-                int venueID;
-                int.TryParse(selectedVenue.ToString(), out venueID);
-
-                if (tbevent_name.Text == "" || orgID < 0 || venueID < 0)
+                if(selectedRow != null)
                 {
-                    ErrMsg.Text = "Missing Data!!";
+                    MessageBox.Show("Don't select row from Table while Adding data");
+                    selectedRow = null;
                 }
                 else
                 {
-
-
-                    //Convert.ToDateTime(dateTimePicker1)
-                    bool res = client.AddEvent(tbevent_name.Text, dtpdate.Value , dtpstart_time.Text, dtpend_time.Text, orgID, venueID);
-                    ShowEvents();
-                    if (res)
+                    if (cmborg.SelectedItem == null || cmbvenue.SelectedItem == null)
                     {
-                        ErrMsg.Text = "Event Added!!";
-                        ClearTextBoxes();
+                        MessageBox.Show("Please select a Item from Drop Down");
                     }
                     else
                     {
-                        ErrMsg.Text = "Event Not Added!!";
+                        Object selectedOrg = cmborg.SelectedValue;
+                        int orgID;
+                        int.TryParse(selectedOrg.ToString(), out orgID);
+
+                        Object selectedVenue = cmbvenue.SelectedValue;
+                        int venueID;
+                        int.TryParse(selectedVenue.ToString(), out venueID);
+
+                        if (tbevent_name.Text == "")
+                        {
+                            ErrMsg.Text = "Missing Data!!";
+                        }
+                        else
+                        {
+
+
+                            //Convert.ToDateTime(dateTimePicker1)
+                            bool res = client.AddEvent(tbevent_name.Text, dtpdate.Value, dtpstart_time.Text, dtpend_time.Text, orgID, venueID);
+                            ShowEvents();
+                            if (res)
+                            {
+                                ErrMsg.Text = "Event Added!!";
+                                ClearTextBoxes();
+                            }
+                            else
+                            {
+                                ErrMsg.Text = "Event Not Added!!";
+                            }
+                        }
                     }
                 }
+                
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
 

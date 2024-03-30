@@ -89,7 +89,7 @@ namespace EventMgmtClient
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -97,12 +97,12 @@ namespace EventMgmtClient
         {
             try
             {
-                DataGridViewRow selectedRow = VenueDG.CurrentRow;
+                
                 if (selectedRow == null)
                 {
-                    ErrMsg.Text = "Please select a row to delete.";
+                    MessageBox.Show("Please select a row to Delete.");
                 }
-                if (tbvenuename.Text == "" || tblocation.Text == "" || tbcapacity.Text == "")
+                else if (tbvenuename.Text == "" || tblocation.Text == "" || tbcapacity.Text == "")
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }
@@ -126,15 +126,19 @@ namespace EventMgmtClient
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void updateParticipant_Click(object sender, EventArgs e)
+        private void updateVenue_Click(object sender, EventArgs e)
         {
             try
             {
-                if (tbvenuename.Text == "" || tblocation.Text == "" || tbcapacity.Text == "")
+                if (selectedRow == null)
+                {
+                    MessageBox.Show("Please select a row to Update.");
+                }
+                else if (tbvenuename.Text == "" || tblocation.Text == "" || tbcapacity.Text == "")
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }
@@ -157,7 +161,7 @@ namespace EventMgmtClient
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
     }

@@ -114,36 +114,47 @@ namespace EventMgmtClient
         {
             try
             {
-                Object selectedPart = cmbpart.SelectedValue;
-                int partID;
-                int.TryParse(selectedPart.ToString(), out partID);
-
-                Object selectedEvent = cmbevent.SelectedValue;
-                int eventID;
-                int.TryParse(selectedEvent.ToString(), out eventID);
-
-                if(partID < 0 ||  eventID < 0 || nudfees.Value < 0)
+                if (selectedRow != null)
                 {
-                    ErrMsg.Text = "Missing Data!!";
+                    MessageBox.Show("Don't select row from Table while Adding data");
+                    selectedRow = null;
                 }
                 else
                 {
-                    bool res = client.AddRegistration(partID, eventID, dtpreg_date.Value, (int)nudfees.Value);
-                    ShowEventRegistrations();
-                    if(res)
+                    if (cmbevent.SelectedItem == null || cmbpart.SelectedItem == null)
                     {
-                        ErrMsg.Text = "Event Registration Added!!";
-                        ClearTextBoxes();
+                        MessageBox.Show("Please select a Item from Drop Down");
                     }
                     else
                     {
-                        ErrMsg.Text = "Event Registration Not Added!!";
+                        Object selectedPart = cmbpart.SelectedValue;
+                        int partID;
+                        int.TryParse(selectedPart.ToString(), out partID);
+
+                        Object selectedEvent = cmbevent.SelectedValue;
+                        int eventID;
+                        int.TryParse(selectedEvent.ToString(), out eventID);
+
+                        
+                        
+                        bool res = client.AddRegistration(partID, eventID, dtpreg_date.Value, (int)nudfees.Value);
+                        ShowEventRegistrations();
+                        if (res)
+                        {
+                            ErrMsg.Text = "Event Registration Added!!";
+                            ClearTextBoxes();
+                        }
+                        else
+                        {
+                            ErrMsg.Text = "Event Registration Not Added!!";
+                        }
+                        
                     }
                 }
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -151,36 +162,51 @@ namespace EventMgmtClient
         {
             try
             {
-                Object selectedPart = cmbpart.SelectedValue;
-                int partID;
-                int.TryParse(selectedPart.ToString(), out partID);
-
-                Object selectedEvent = cmbevent.SelectedValue;
-                int eventID;
-                int.TryParse(selectedEvent.ToString(), out eventID);
-
-                if (partID < 0 || eventID < 0 || nudfees.Value < 0)
+                if(selectedRow == null)
                 {
-                    ErrMsg.Text = "Missing Data!!";
+                    MessageBox.Show("Please select a row to Delete");
                 }
                 else
                 {
-                    bool res = client.DeleteRegistration(Convert.ToInt32(selectedRow.Cells[0].Value));
-                    ShowEventRegistrations();
-                    if (res)
+                    if (cmbevent.SelectedItem == null || cmbpart.SelectedItem == null)
                     {
-                        ErrMsg.Text = "Event Registration Deleted!!";
-                        ClearTextBoxes();
+                        MessageBox.Show("Please select a Item from Drop Down");
                     }
                     else
                     {
-                        ErrMsg.Text = "Not Deleted!!";
+                        Object selectedPart = cmbpart.SelectedValue;
+                        int partID;
+                        int.TryParse(selectedPart.ToString(), out partID);
+
+                        Object selectedEvent = cmbevent.SelectedValue;
+                        int eventID;
+                        int.TryParse(selectedEvent.ToString(), out eventID);
+
+                        if (partID < 0 || eventID < 0 || nudfees.Value < 0)
+                        {
+                            ErrMsg.Text = "Missing Data!!";
+                        }
+                        else
+                        {
+                            bool res = client.DeleteRegistration(Convert.ToInt32(selectedRow.Cells[0].Value));
+                            ShowEventRegistrations();
+                            if (res)
+                            {
+                                ErrMsg.Text = "Event Registration Deleted!!";
+                                ClearTextBoxes();
+                            }
+                            else
+                            {
+                                ErrMsg.Text = "Not Deleted!!";
+                            }
+                        }
                     }
                 }
+                
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
     }

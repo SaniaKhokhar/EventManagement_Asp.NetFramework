@@ -40,7 +40,7 @@
             this.venue_name = new System.Windows.Forms.Label();
             this.deleteVenue = new System.Windows.Forms.Button();
             this.addVenue = new System.Windows.Forms.Button();
-            this.updateParticipant = new System.Windows.Forms.Button();
+            this.updateVenue = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.VenueDG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,26 +168,26 @@
             this.addVenue.UseVisualStyleBackColor = false;
             this.addVenue.Click += new System.EventHandler(this.addVenue_Click);
             // 
-            // updateParticipant
+            // updateVenue
             // 
-            this.updateParticipant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.updateParticipant.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateParticipant.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.updateParticipant.Location = new System.Drawing.Point(542, 419);
-            this.updateParticipant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.updateParticipant.Name = "updateParticipant";
-            this.updateParticipant.Size = new System.Drawing.Size(85, 47);
-            this.updateParticipant.TabIndex = 41;
-            this.updateParticipant.Text = "Update";
-            this.updateParticipant.UseVisualStyleBackColor = false;
-            this.updateParticipant.Click += new System.EventHandler(this.updateParticipant_Click);
+            this.updateVenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.updateVenue.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateVenue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.updateVenue.Location = new System.Drawing.Point(542, 419);
+            this.updateVenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateVenue.Name = "updateVenue";
+            this.updateVenue.Size = new System.Drawing.Size(85, 47);
+            this.updateVenue.TabIndex = 41;
+            this.updateVenue.Text = "Update";
+            this.updateVenue.UseVisualStyleBackColor = false;
+            this.updateVenue.Click += new System.EventHandler(this.updateVenue_Click);
             // 
             // Venue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 753);
-            this.Controls.Add(this.updateParticipant);
+            this.Controls.Add(this.updateVenue);
             this.Controls.Add(this.ErrMsg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.VenueDG);
@@ -215,7 +215,7 @@
             this.Controls.SetChildIndex(this.VenueDG, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.ErrMsg, 0);
-            this.Controls.SetChildIndex(this.updateParticipant, 0);
+            this.Controls.SetChildIndex(this.updateVenue, 0);
             ((System.ComponentModel.ISupportInitialize)(this.VenueDG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -234,6 +234,6 @@
         private System.Windows.Forms.Label venue_name;
         private System.Windows.Forms.Button deleteVenue;
         private System.Windows.Forms.Button addVenue;
-        private System.Windows.Forms.Button updateParticipant;
+        private System.Windows.Forms.Button updateVenue;
     }
 }
