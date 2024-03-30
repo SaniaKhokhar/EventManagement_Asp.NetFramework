@@ -42,9 +42,12 @@ namespace EventMgmtServiceLibrary
 
         [OperationContract]
         bool UpdateVenue(int vid, string venue_name, string location, int capacity);
+
+
         //Organizer services
         [OperationContract]
         bool AddOrganizer(string org_name, long org_contact, string org_email);
+
         [OperationContract]
         DataSet GetOrganizers();
 
@@ -60,6 +63,7 @@ namespace EventMgmtServiceLibrary
         //Event services
         [OperationContract]
         bool AddEvent(string event_name, DateTime date, string start_time, string  end_time,int oid, int vid);
+
         [OperationContract]
         DataSet GetEvents();
 

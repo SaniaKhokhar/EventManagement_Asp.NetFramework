@@ -40,6 +40,7 @@
             this.venue_name = new System.Windows.Forms.Label();
             this.deleteVenue = new System.Windows.Forms.Button();
             this.addVenue = new System.Windows.Forms.Button();
+            this.updateParticipant = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.VenueDG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +107,7 @@
             this.tbvenuename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbvenuename.MinimumSize = new System.Drawing.Size(4, 50);
             this.tbvenuename.Name = "tbvenuename";
-            this.tbvenuename.Size = new System.Drawing.Size(175, 50);
+            this.tbvenuename.Size = new System.Drawing.Size(175, 22);
             this.tbvenuename.TabIndex = 23;
             // 
             // capacity
@@ -144,7 +145,7 @@
             this.deleteVenue.BackColor = System.Drawing.Color.Red;
             this.deleteVenue.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteVenue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteVenue.Location = new System.Drawing.Point(655, 419);
+            this.deleteVenue.Location = new System.Drawing.Point(423, 419);
             this.deleteVenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteVenue.Name = "deleteVenue";
             this.deleteVenue.Size = new System.Drawing.Size(85, 47);
@@ -158,7 +159,7 @@
             this.addVenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.addVenue.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addVenue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addVenue.Location = new System.Drawing.Point(534, 419);
+            this.addVenue.Location = new System.Drawing.Point(655, 419);
             this.addVenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addVenue.Name = "addVenue";
             this.addVenue.Size = new System.Drawing.Size(85, 47);
@@ -167,11 +168,26 @@
             this.addVenue.UseVisualStyleBackColor = false;
             this.addVenue.Click += new System.EventHandler(this.addVenue_Click);
             // 
+            // updateParticipant
+            // 
+            this.updateParticipant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.updateParticipant.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateParticipant.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.updateParticipant.Location = new System.Drawing.Point(542, 419);
+            this.updateParticipant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateParticipant.Name = "updateParticipant";
+            this.updateParticipant.Size = new System.Drawing.Size(85, 47);
+            this.updateParticipant.TabIndex = 41;
+            this.updateParticipant.Text = "Update";
+            this.updateParticipant.UseVisualStyleBackColor = false;
+            this.updateParticipant.Click += new System.EventHandler(this.updateParticipant_Click);
+            // 
             // Venue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 753);
+            this.Controls.Add(this.updateParticipant);
             this.Controls.Add(this.ErrMsg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.VenueDG);
@@ -199,6 +215,7 @@
             this.Controls.SetChildIndex(this.VenueDG, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.ErrMsg, 0);
+            this.Controls.SetChildIndex(this.updateParticipant, 0);
             ((System.ComponentModel.ISupportInitialize)(this.VenueDG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -217,5 +234,6 @@
         private System.Windows.Forms.Label venue_name;
         private System.Windows.Forms.Button deleteVenue;
         private System.Windows.Forms.Button addVenue;
+        private System.Windows.Forms.Button updateParticipant;
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ErrMsg = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.OrganizerDG = new System.Windows.Forms.DataGridView();
@@ -40,6 +40,7 @@
             this.org_name = new System.Windows.Forms.Label();
             this.deleteOrganizer = new System.Windows.Forms.Button();
             this.addOrganizer = new System.Windows.Forms.Button();
+            this.updateParticipant = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OrganizerDG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,14 +66,14 @@
             // 
             this.OrganizerDG.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.OrganizerDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OrganizerDG.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrganizerDG.DefaultCellStyle = dataGridViewCellStyle1;
             this.OrganizerDG.Location = new System.Drawing.Point(857, 176);
             this.OrganizerDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OrganizerDG.Name = "OrganizerDG";
@@ -143,7 +144,7 @@
             this.deleteOrganizer.BackColor = System.Drawing.Color.Red;
             this.deleteOrganizer.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteOrganizer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteOrganizer.Location = new System.Drawing.Point(688, 452);
+            this.deleteOrganizer.Location = new System.Drawing.Point(463, 453);
             this.deleteOrganizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteOrganizer.Name = "deleteOrganizer";
             this.deleteOrganizer.Size = new System.Drawing.Size(85, 47);
@@ -157,7 +158,7 @@
             this.addOrganizer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.addOrganizer.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addOrganizer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addOrganizer.Location = new System.Drawing.Point(575, 452);
+            this.addOrganizer.Location = new System.Drawing.Point(688, 453);
             this.addOrganizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addOrganizer.Name = "addOrganizer";
             this.addOrganizer.Size = new System.Drawing.Size(85, 47);
@@ -166,12 +167,27 @@
             this.addOrganizer.UseVisualStyleBackColor = false;
             this.addOrganizer.Click += new System.EventHandler(this.addOrganizer_Click);
             // 
+            // updateParticipant
+            // 
+            this.updateParticipant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.updateParticipant.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateParticipant.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.updateParticipant.Location = new System.Drawing.Point(577, 453);
+            this.updateParticipant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateParticipant.Name = "updateParticipant";
+            this.updateParticipant.Size = new System.Drawing.Size(85, 47);
+            this.updateParticipant.TabIndex = 46;
+            this.updateParticipant.Text = "Update";
+            this.updateParticipant.UseVisualStyleBackColor = false;
+            this.updateParticipant.Click += new System.EventHandler(this.updateParticipant_Click);
+            // 
             // Organizer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1482, 753);
+            this.Controls.Add(this.updateParticipant);
             this.Controls.Add(this.ErrMsg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.OrganizerDG);
@@ -199,6 +215,7 @@
             this.Controls.SetChildIndex(this.OrganizerDG, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.ErrMsg, 0);
+            this.Controls.SetChildIndex(this.updateParticipant, 0);
             ((System.ComponentModel.ISupportInitialize)(this.OrganizerDG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -217,5 +234,6 @@
         private System.Windows.Forms.Label org_name;
         private System.Windows.Forms.Button deleteOrganizer;
         private System.Windows.Forms.Button addOrganizer;
+        private System.Windows.Forms.Button updateParticipant;
     }
 }

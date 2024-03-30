@@ -70,6 +70,24 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="UpdateParticipant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pid" type="xs:int" />
+        <xs:element minOccurs="0" name="fname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mob_no" type="xs:long" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateParticipantResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateParticipantResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="AddVenue">
     <xs:complexType>
       <xs:sequence>
@@ -138,6 +156,23 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="UpdateVenue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vid" type="xs:int" />
+        <xs:element minOccurs="0" name="venue_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="location" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="capacity" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVenueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateVenueResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="AddOrganizer">
     <xs:complexType>
       <xs:sequence>
@@ -203,6 +238,23 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="DeleteOrganizerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrganizer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="oid" type="xs:int" />
+        <xs:element minOccurs="0" name="org_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="org_contact" type="xs:long" />
+        <xs:element minOccurs="0" name="org_email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrganizerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateOrganizerResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

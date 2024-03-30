@@ -68,6 +68,10 @@ namespace EventMgmtClient
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }
+                else if(selectedRow != null)
+                {
+                    MessageBox.Show( "You should Update it.!!\n click on 'Update' button" );
+                }
                 else
                 {
                     bool res = client.AddParticipant(tbfname.Text, tblname.Text, Convert.ToInt64(tbmob_no.Text), tbemail.Text);
@@ -92,6 +96,11 @@ namespace EventMgmtClient
         {
             try
             {
+                DataGridViewRow selectedRow = ParticipantDG.CurrentRow;
+                if (selectedRow == null)
+                {
+                    ErrMsg.Text = "Please select a row to delete.";
+                }
                 if (tbfname.Text == "" || tblname.Text == "" || tbemail.Text == "" || tbmob_no.Text == "")
                 {
                     ErrMsg.Text = "Missing Data!!";
@@ -130,16 +139,18 @@ namespace EventMgmtClient
                 }
                 else
                 {
-                    bool res = client.AddParticipant(tbfname.Text, tblname.Text, Convert.ToInt64(tbmob_no.Text), tbemail.Text);
+                    int pid = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+                    bool res = client.UpdateParticipant(pid, tbfname.Text, tblname.Text, Convert.ToInt64(tbmob_no.Text), tbemail.Text);
                     ShowParticipant();
                     if (res)
                     {
-                        ErrMsg.Text = "Participant Added!!";
+                        ErrMsg.Text = "Participant Updated!!";
                         ClearTextBoxes();
                     }
                     else
                     {
-                        ErrMsg.Text = "Participant Not Added!!";
+                        ErrMsg.Text = "Participant Not Updated!!";
                     }
                 }
             }

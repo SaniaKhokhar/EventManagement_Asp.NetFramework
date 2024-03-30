@@ -68,6 +68,10 @@ namespace EventMgmtClient
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }
+                else if (selectedRow != null)
+                {
+                    MessageBox.Show("You should Update it.!!\n click on 'Update' button");
+                }
                 else
                 {
                     bool res = client.AddVenue(tbvenuename.Text, tblocation.Text, Convert.ToInt32(tbcapacity.Text));
@@ -93,13 +97,18 @@ namespace EventMgmtClient
         {
             try
             {
+                DataGridViewRow selectedRow = VenueDG.CurrentRow;
+                if (selectedRow == null)
+                {
+                    ErrMsg.Text = "Please select a row to delete.";
+                }
                 if (tbvenuename.Text == "" || tblocation.Text == "" || tbcapacity.Text == "")
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }
                 else
                 {
-
+                    
                     bool res = client.DeleteVenue(Convert.ToInt32(selectedRow.Cells[0].Value));                    
                     ShowVenue();
 
@@ -110,7 +119,7 @@ namespace EventMgmtClient
                     }
                     else
                     {
-                        ErrMsg.Text = "Not deleted";
+                        ErrMsg.Text = "Not Deleted";
                     }
                 }
 
@@ -121,6 +130,35 @@ namespace EventMgmtClient
             }
         }
 
-        
+        private void updateParticipant_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tbvenuename.Text == "" || tblocation.Text == "" || tbcapacity.Text == "")
+                {
+                    ErrMsg.Text = "Missing Data!!";
+                }
+                else
+                {
+                    int vid = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+                    bool res = client.UpdateVenue(vid, tbvenuename.Text, tblocation.Text, Convert.ToInt32(tbcapacity.Text));
+                    ShowVenue();
+                    if (res)
+                    {
+                        ErrMsg.Text = "Venue Updated!!";
+                        ClearTextBoxes();
+                    }
+                    else
+                    {
+                        ErrMsg.Text = "Venue Not Updated!!";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrMsg.Text = ex.Message;
+            }
+        }
     }
 }

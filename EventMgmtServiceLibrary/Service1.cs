@@ -166,6 +166,7 @@ namespace EventMgmtServiceLibrary
             }
 
         }
+
         //Venues 
         public bool AddVenue(string venue_name, string location, int capacity)
         {
@@ -295,7 +296,7 @@ namespace EventMgmtServiceLibrary
 
         DataSet IService1.GetOrganizers()
         {
-            string query = "SELECT oid as Id, org_name as Name,org_email as Email FROM organizer";
+            string query = "SELECT oid as Id, org_name as Name,org_email as Email, org_contact as Contact_No FROM organizer";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
             da.Fill(ds, "organizers");

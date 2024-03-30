@@ -69,6 +69,10 @@ namespace EventMgmtClient
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }
+                else if (selectedRow != null)
+                {
+                    MessageBox.Show("You should Update it.!!\n click on 'Update' button");
+                }
                 else
                 {
                     bool res = client.AddOrganizer(tborgname.Text, Convert.ToInt64(tbcontactno.Text), tbemail.Text);
@@ -86,7 +90,7 @@ namespace EventMgmtClient
             }
             catch (Exception ex)
             {
-                ErrMsg.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -127,5 +131,35 @@ namespace EventMgmtClient
             }
         }
 
+        private void updateParticipant_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tborgname.Text == "" || tbcontactno.Text == "" || tbemail.Text == "")
+                {
+                    ErrMsg.Text = "Missing Data!!";
+                }
+                else
+                {
+                    int oid = Convert.ToInt32(selectedRow.Cells[0].Value);
+
+                    bool res = client.UpdateOrganizer(oid, tborgname.Text, Convert.ToInt64(tbcontactno.Text), tbemail.Text);
+                    ShowOrganizer();
+                    if (res)
+                    {
+                        ErrMsg.Text = "Organizer Updated!!";
+                        ClearTextBoxes();
+                    }
+                    else
+                    {
+                        ErrMsg.Text = "Organizer Not Updated!!";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrMsg.Text = ex.Message;
+            }
+        }
     }
 }
