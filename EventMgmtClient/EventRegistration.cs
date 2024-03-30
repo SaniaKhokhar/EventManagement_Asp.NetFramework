@@ -39,7 +39,7 @@ namespace EventMgmtClient
             DataTable participantsTable = partDataset.Tables["participants"];
             
             //new Column in table
-            participantsTable.Columns.Add("Identity", typeof(string), "First_Name + ' ' + Email + ' ' + Mobile_No");
+            participantsTable.Columns.Add("Identity", typeof(string), "First_Name + ' ' + Email");
 
             cmbpart.DataSource = participantsTable;
             cmbpart.DisplayMember = "Identity";

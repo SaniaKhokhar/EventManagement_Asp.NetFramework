@@ -28,108 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.EventDG = new System.Windows.Forms.DataGridView();
             this.tbevent_name = new System.Windows.Forms.TextBox();
-            this.end_time = new System.Windows.Forms.Label();
-            this.start_time = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.Label();
-            this.event_name = new System.Windows.Forms.Label();
+            this.lblevent_name = new System.Windows.Forms.Label();
             this.deleteEvent = new System.Windows.Forms.Button();
             this.addEvent = new System.Windows.Forms.Button();
             this.dtpdate = new System.Windows.Forms.DateTimePicker();
-            this.venue = new System.Windows.Forms.Label();
-            this.organizer = new System.Windows.Forms.Label();
             this.ErrMsg = new System.Windows.Forms.Label();
             this.dtpend_time = new System.Windows.Forms.DateTimePicker();
             this.dtpstart_time = new System.Windows.Forms.DateTimePicker();
             this.cmborg = new System.Windows.Forms.ComboBox();
-            this.organizerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbvenue = new System.Windows.Forms.ComboBox();
+            this.lblend_time = new System.Windows.Forms.Label();
+            this.lblstart_time = new System.Windows.Forms.Label();
+            this.lbldate = new System.Windows.Forms.Label();
+            this.lblvenue = new System.Windows.Forms.Label();
+            this.lblorg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.EventDG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.organizerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(331, 137);
+            this.label2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Navy;
+            this.label2.Location = new System.Drawing.Point(380, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 31);
+            this.label2.Size = new System.Drawing.Size(100, 35);
             this.label2.TabIndex = 39;
             this.label2.Text = "Events";
             // 
             // EventDG
             // 
-            this.EventDG.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.EventDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.EventDG.BackgroundColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EventDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.EventDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EventDG.Location = new System.Drawing.Point(727, 180);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EventDG.DefaultCellStyle = dataGridViewCellStyle3;
+            this.EventDG.Location = new System.Drawing.Point(970, 200);
             this.EventDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EventDG.Name = "EventDG";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EventDG.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.EventDG.RowHeadersWidth = 62;
             this.EventDG.RowTemplate.Height = 28;
-            this.EventDG.Size = new System.Drawing.Size(800, 400);
+            this.EventDG.Size = new System.Drawing.Size(1050, 500);
             this.EventDG.TabIndex = 50;
             this.EventDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EventDG_CellClick);
             // 
             // tbevent_name
             // 
-            this.tbevent_name.Location = new System.Drawing.Point(485, 197);
+            this.tbevent_name.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbevent_name.Location = new System.Drawing.Point(600, 250);
             this.tbevent_name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbevent_name.Name = "tbevent_name";
-            this.tbevent_name.Size = new System.Drawing.Size(195, 22);
+            this.tbevent_name.Size = new System.Drawing.Size(195, 29);
             this.tbevent_name.TabIndex = 46;
             // 
-            // end_time
+            // lblevent_name
             // 
-            this.end_time.AutoSize = true;
-            this.end_time.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.end_time.Location = new System.Drawing.Point(333, 399);
-            this.end_time.Name = "end_time";
-            this.end_time.Size = new System.Drawing.Size(73, 19);
-            this.end_time.TabIndex = 45;
-            this.end_time.Text = "End Time";
-            // 
-            // start_time
-            // 
-            this.start_time.AutoSize = true;
-            this.start_time.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start_time.Location = new System.Drawing.Point(333, 337);
-            this.start_time.Name = "start_time";
-            this.start_time.Size = new System.Drawing.Size(76, 19);
-            this.start_time.TabIndex = 44;
-            this.start_time.Text = "Start time";
-            // 
-            // date
-            // 
-            this.date.AutoSize = true;
-            this.date.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Location = new System.Drawing.Point(333, 266);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(41, 19);
-            this.date.TabIndex = 43;
-            this.date.Text = "Date";
-            // 
-            // event_name
-            // 
-            this.event_name.AutoSize = true;
-            this.event_name.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.event_name.Location = new System.Drawing.Point(333, 199);
-            this.event_name.Name = "event_name";
-            this.event_name.Size = new System.Drawing.Size(91, 19);
-            this.event_name.TabIndex = 42;
-            this.event_name.Text = "Event Name";
+            this.lblevent_name.AutoSize = true;
+            this.lblevent_name.BackColor = System.Drawing.Color.Transparent;
+            this.lblevent_name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblevent_name.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblevent_name.Location = new System.Drawing.Point(400, 250);
+            this.lblevent_name.Name = "lblevent_name";
+            this.lblevent_name.Size = new System.Drawing.Size(106, 22);
+            this.lblevent_name.TabIndex = 42;
+            this.lblevent_name.Text = "Event Name";
             // 
             // deleteEvent
             // 
-            this.deleteEvent.BackColor = System.Drawing.Color.Red;
-            this.deleteEvent.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteEvent.BackColor = System.Drawing.Color.OrangeRed;
+            this.deleteEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
+            this.deleteEvent.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteEvent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteEvent.Location = new System.Drawing.Point(466, 543);
+            this.deleteEvent.Location = new System.Drawing.Point(600, 620);
             this.deleteEvent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteEvent.Name = "deleteEvent";
             this.deleteEvent.Size = new System.Drawing.Size(85, 47);
@@ -140,10 +141,11 @@
             // 
             // addEvent
             // 
-            this.addEvent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.addEvent.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEvent.BackColor = System.Drawing.Color.LimeGreen;
+            this.addEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.addEvent.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEvent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addEvent.Location = new System.Drawing.Point(595, 543);
+            this.addEvent.Location = new System.Drawing.Point(710, 620);
             this.addEvent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addEvent.Name = "addEvent";
             this.addEvent.Size = new System.Drawing.Size(85, 47);
@@ -154,138 +156,172 @@
             // 
             // dtpdate
             // 
-            this.dtpdate.Location = new System.Drawing.Point(485, 266);
+            this.dtpdate.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpdate.Location = new System.Drawing.Point(600, 310);
             this.dtpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpdate.Name = "dtpdate";
-            this.dtpdate.Size = new System.Drawing.Size(195, 22);
+            this.dtpdate.Size = new System.Drawing.Size(195, 28);
             this.dtpdate.TabIndex = 51;
-            // 
-            // venue
-            // 
-            this.venue.AutoSize = true;
-            this.venue.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.venue.Location = new System.Drawing.Point(333, 502);
-            this.venue.Name = "venue";
-            this.venue.Size = new System.Drawing.Size(50, 19);
-            this.venue.TabIndex = 53;
-            this.venue.Text = "Venue";
-            // 
-            // organizer
-            // 
-            this.organizer.AutoSize = true;
-            this.organizer.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.organizer.Location = new System.Drawing.Point(333, 439);
-            this.organizer.Name = "organizer";
-            this.organizer.Size = new System.Drawing.Size(76, 19);
-            this.organizer.TabIndex = 52;
-            this.organizer.Text = "Organizer";
             // 
             // ErrMsg
             // 
             this.ErrMsg.AutoSize = true;
+            this.ErrMsg.BackColor = System.Drawing.Color.Transparent;
             this.ErrMsg.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrMsg.ForeColor = System.Drawing.Color.Red;
-            this.ErrMsg.Location = new System.Drawing.Point(471, 647);
+            this.ErrMsg.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrMsg.Location = new System.Drawing.Point(600, 700);
             this.ErrMsg.Name = "ErrMsg";
             this.ErrMsg.Size = new System.Drawing.Size(0, 19);
             this.ErrMsg.TabIndex = 56;
             // 
             // dtpend_time
             // 
+            this.dtpend_time.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpend_time.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpend_time.Location = new System.Drawing.Point(485, 334);
+            this.dtpend_time.Location = new System.Drawing.Point(600, 370);
             this.dtpend_time.Name = "dtpend_time";
-            this.dtpend_time.Size = new System.Drawing.Size(195, 22);
+            this.dtpend_time.Size = new System.Drawing.Size(195, 28);
             this.dtpend_time.TabIndex = 57;
             this.dtpend_time.Value = new System.DateTime(2024, 3, 29, 0, 0, 0, 0);
             // 
             // dtpstart_time
             // 
+            this.dtpstart_time.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpstart_time.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpstart_time.Location = new System.Drawing.Point(485, 396);
+            this.dtpstart_time.Location = new System.Drawing.Point(600, 430);
             this.dtpstart_time.Name = "dtpstart_time";
-            this.dtpstart_time.Size = new System.Drawing.Size(195, 22);
+            this.dtpstart_time.Size = new System.Drawing.Size(195, 28);
             this.dtpstart_time.TabIndex = 58;
             this.dtpstart_time.Value = new System.DateTime(2024, 3, 29, 0, 0, 0, 0);
             // 
             // cmborg
             // 
-            this.cmborg.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.organizerBindingSource, "OrganizerId", true));
-            this.cmborg.DataSource = this.organizerBindingSource;
-            this.cmborg.DisplayMember = "OrganizerName";
             this.cmborg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmborg.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmborg.FormattingEnabled = true;
-            this.cmborg.Location = new System.Drawing.Point(485, 439);
+            this.cmborg.Location = new System.Drawing.Point(600, 490);
             this.cmborg.Name = "cmborg";
-            this.cmborg.Size = new System.Drawing.Size(195, 24);
+            this.cmborg.Size = new System.Drawing.Size(195, 28);
             this.cmborg.TabIndex = 59;
             this.cmborg.ValueMember = "OrganizerId";
             this.cmborg.SelectedIndexChanged += new System.EventHandler(this.cmborg_SelectedIndexChanged);
             // 
-            // organizerBindingSource
-            // 
-            this.organizerBindingSource.DataSource = typeof(EventMgmtClient.ServiceReference1.Organizer);
-            // 
-            // dataSetBindingSource
-            // 
-            this.dataSetBindingSource.DataSource = typeof(System.Data.DataSet);
-            this.dataSetBindingSource.Position = 0;
-            // 
             // cmbvenue
             // 
             this.cmbvenue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbvenue.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbvenue.FormattingEnabled = true;
-            this.cmbvenue.Location = new System.Drawing.Point(485, 501);
+            this.cmbvenue.Location = new System.Drawing.Point(600, 550);
             this.cmbvenue.Name = "cmbvenue";
-            this.cmbvenue.Size = new System.Drawing.Size(195, 24);
+            this.cmbvenue.Size = new System.Drawing.Size(195, 28);
             this.cmbvenue.TabIndex = 60;
             this.cmbvenue.SelectedIndexChanged += new System.EventHandler(this.cmbvenue_SelectedIndexChanged);
+            // 
+            // lblend_time
+            // 
+            this.lblend_time.AutoSize = true;
+            this.lblend_time.BackColor = System.Drawing.Color.Transparent;
+            this.lblend_time.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblend_time.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblend_time.Location = new System.Drawing.Point(400, 430);
+            this.lblend_time.Name = "lblend_time";
+            this.lblend_time.Size = new System.Drawing.Size(86, 22);
+            this.lblend_time.TabIndex = 62;
+            this.lblend_time.Text = "End Time";
+            // 
+            // lblstart_time
+            // 
+            this.lblstart_time.AutoSize = true;
+            this.lblstart_time.BackColor = System.Drawing.Color.Transparent;
+            this.lblstart_time.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblstart_time.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblstart_time.Location = new System.Drawing.Point(400, 370);
+            this.lblstart_time.Name = "lblstart_time";
+            this.lblstart_time.Size = new System.Drawing.Size(92, 22);
+            this.lblstart_time.TabIndex = 63;
+            this.lblstart_time.Text = "Start Time";
+            // 
+            // lbldate
+            // 
+            this.lbldate.AutoSize = true;
+            this.lbldate.BackColor = System.Drawing.Color.Transparent;
+            this.lbldate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldate.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lbldate.Location = new System.Drawing.Point(400, 310);
+            this.lbldate.Name = "lbldate";
+            this.lbldate.Size = new System.Drawing.Size(47, 22);
+            this.lbldate.TabIndex = 64;
+            this.lbldate.Text = "Date";
+            // 
+            // lblvenue
+            // 
+            this.lblvenue.AutoSize = true;
+            this.lblvenue.BackColor = System.Drawing.Color.Transparent;
+            this.lblvenue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvenue.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblvenue.Location = new System.Drawing.Point(400, 550);
+            this.lblvenue.Name = "lblvenue";
+            this.lblvenue.Size = new System.Drawing.Size(57, 22);
+            this.lblvenue.TabIndex = 65;
+            this.lblvenue.Text = "Venue";
+            // 
+            // lblorg
+            // 
+            this.lblorg.AutoSize = true;
+            this.lblorg.BackColor = System.Drawing.Color.Transparent;
+            this.lblorg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblorg.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblorg.Location = new System.Drawing.Point(400, 490);
+            this.lblorg.Name = "lblorg";
+            this.lblorg.Size = new System.Drawing.Size(88, 22);
+            this.lblorg.TabIndex = 66;
+            this.lblorg.Text = "Organizer";
             // 
             // Events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 753);
+            this.BackColor = System.Drawing.Color.Azure;
+            this.ClientSize = new System.Drawing.Size(1682, 803);
+            this.Controls.Add(this.lblorg);
+            this.Controls.Add(this.lblvenue);
+            this.Controls.Add(this.lbldate);
+            this.Controls.Add(this.lblstart_time);
+            this.Controls.Add(this.lblend_time);
             this.Controls.Add(this.cmbvenue);
             this.Controls.Add(this.cmborg);
             this.Controls.Add(this.dtpstart_time);
             this.Controls.Add(this.dtpend_time);
             this.Controls.Add(this.ErrMsg);
-            this.Controls.Add(this.venue);
-            this.Controls.Add(this.organizer);
             this.Controls.Add(this.dtpdate);
             this.Controls.Add(this.EventDG);
             this.Controls.Add(this.tbevent_name);
-            this.Controls.Add(this.end_time);
-            this.Controls.Add(this.start_time);
-            this.Controls.Add(this.date);
-            this.Controls.Add(this.event_name);
+            this.Controls.Add(this.lblevent_name);
             this.Controls.Add(this.deleteEvent);
             this.Controls.Add(this.addEvent);
             this.Controls.Add(this.label2);
             this.Name = "Events";
             this.Text = "Event";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Events_Load);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.addEvent, 0);
             this.Controls.SetChildIndex(this.deleteEvent, 0);
-            this.Controls.SetChildIndex(this.event_name, 0);
-            this.Controls.SetChildIndex(this.date, 0);
-            this.Controls.SetChildIndex(this.start_time, 0);
-            this.Controls.SetChildIndex(this.end_time, 0);
+            this.Controls.SetChildIndex(this.lblevent_name, 0);
             this.Controls.SetChildIndex(this.tbevent_name, 0);
             this.Controls.SetChildIndex(this.EventDG, 0);
             this.Controls.SetChildIndex(this.dtpdate, 0);
-            this.Controls.SetChildIndex(this.organizer, 0);
-            this.Controls.SetChildIndex(this.venue, 0);
             this.Controls.SetChildIndex(this.ErrMsg, 0);
             this.Controls.SetChildIndex(this.dtpend_time, 0);
             this.Controls.SetChildIndex(this.dtpstart_time, 0);
             this.Controls.SetChildIndex(this.cmborg, 0);
             this.Controls.SetChildIndex(this.cmbvenue, 0);
+            this.Controls.SetChildIndex(this.lblend_time, 0);
+            this.Controls.SetChildIndex(this.lblstart_time, 0);
+            this.Controls.SetChildIndex(this.lbldate, 0);
+            this.Controls.SetChildIndex(this.lblvenue, 0);
+            this.Controls.SetChildIndex(this.lblorg, 0);
             ((System.ComponentModel.ISupportInitialize)(this.EventDG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.organizerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,21 +332,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView EventDG;
         private System.Windows.Forms.TextBox tbevent_name;
-        private System.Windows.Forms.Label end_time;
-        private System.Windows.Forms.Label start_time;
-        private System.Windows.Forms.Label date;
-        private System.Windows.Forms.Label event_name;
+        private System.Windows.Forms.Label lblevent_name;
         private System.Windows.Forms.Button deleteEvent;
         private System.Windows.Forms.Button addEvent;
         private System.Windows.Forms.DateTimePicker dtpdate;
-        private System.Windows.Forms.Label venue;
-        private System.Windows.Forms.Label organizer;
         private System.Windows.Forms.Label ErrMsg;
         private System.Windows.Forms.DateTimePicker dtpend_time;
         private System.Windows.Forms.DateTimePicker dtpstart_time;
         private System.Windows.Forms.ComboBox cmborg;
-        private System.Windows.Forms.BindingSource organizerBindingSource;
-        private System.Windows.Forms.BindingSource dataSetBindingSource;
         private System.Windows.Forms.ComboBox cmbvenue;
+        private System.Windows.Forms.Label lblend_time;
+        private System.Windows.Forms.Label lblstart_time;
+        private System.Windows.Forms.Label lbldate;
+        private System.Windows.Forms.Label lblvenue;
+        private System.Windows.Forms.Label lblorg;
     }
 }

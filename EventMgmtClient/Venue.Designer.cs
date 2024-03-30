@@ -47,7 +47,9 @@
             // ErrMsg
             // 
             this.ErrMsg.AutoSize = true;
-            this.ErrMsg.Location = new System.Drawing.Point(446, 585);
+            this.ErrMsg.BackColor = System.Drawing.Color.Transparent;
+            this.ErrMsg.ForeColor = System.Drawing.Color.Crimson;
+            this.ErrMsg.Location = new System.Drawing.Point(430, 590);
             this.ErrMsg.Name = "ErrMsg";
             this.ErrMsg.Size = new System.Drawing.Size(0, 16);
             this.ErrMsg.TabIndex = 30;
@@ -55,47 +57,52 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(395, 137);
+            this.label2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Navy;
+            this.label2.Location = new System.Drawing.Point(380, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 31);
+            this.label2.Size = new System.Drawing.Size(91, 35);
             this.label2.TabIndex = 29;
             this.label2.Text = "Venue";
             // 
             // VenueDG
             // 
-            this.VenueDG.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.VenueDG.BackgroundColor = System.Drawing.Color.LightCyan;
             this.VenueDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.VenueDG.DefaultCellStyle = dataGridViewCellStyle1;
-            this.VenueDG.Location = new System.Drawing.Point(800, 150);
+            this.VenueDG.Location = new System.Drawing.Point(970, 200);
             this.VenueDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VenueDG.Name = "VenueDG";
             this.VenueDG.RowHeadersWidth = 62;
             this.VenueDG.RowTemplate.Height = 28;
-            this.VenueDG.Size = new System.Drawing.Size(800, 400);
+            this.VenueDG.Size = new System.Drawing.Size(700, 500);
             this.VenueDG.TabIndex = 27;
             this.VenueDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VenueDG_CellClick);
             // 
             // tbcapacity
             // 
-            this.tbcapacity.Location = new System.Drawing.Point(565, 331);
-            this.tbcapacity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbcapacity.MinimumSize = new System.Drawing.Size(4, 50);
+            this.tbcapacity.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbcapacity.Location = new System.Drawing.Point(600, 370);
+            this.tbcapacity.Margin = new System.Windows.Forms.Padding(0);
+            this.tbcapacity.MinimumSize = new System.Drawing.Size(4, 20);
             this.tbcapacity.Name = "tbcapacity";
-            this.tbcapacity.Size = new System.Drawing.Size(175, 22);
+            this.tbcapacity.Size = new System.Drawing.Size(175, 28);
             this.tbcapacity.TabIndex = 25;
             // 
             // tblocation
             // 
-            this.tblocation.Location = new System.Drawing.Point(565, 258);
+            this.tblocation.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblocation.Location = new System.Drawing.Point(600, 310);
             this.tblocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tblocation.MinimumSize = new System.Drawing.Size(4, 20);
             this.tblocation.Multiline = true;
             this.tblocation.Name = "tblocation";
             this.tblocation.Size = new System.Drawing.Size(175, 38);
@@ -103,49 +110,57 @@
             // 
             // tbvenuename
             // 
-            this.tbvenuename.Location = new System.Drawing.Point(565, 191);
-            this.tbvenuename.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbvenuename.MinimumSize = new System.Drawing.Size(4, 50);
+            this.tbvenuename.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbvenuename.Location = new System.Drawing.Point(600, 250);
+            this.tbvenuename.Margin = new System.Windows.Forms.Padding(0);
+            this.tbvenuename.MinimumSize = new System.Drawing.Size(4, 20);
             this.tbvenuename.Name = "tbvenuename";
-            this.tbvenuename.Size = new System.Drawing.Size(175, 22);
+            this.tbvenuename.Size = new System.Drawing.Size(175, 28);
             this.tbvenuename.TabIndex = 23;
             // 
             // capacity
             // 
             this.capacity.AutoSize = true;
-            this.capacity.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.capacity.Location = new System.Drawing.Point(397, 331);
+            this.capacity.BackColor = System.Drawing.Color.Transparent;
+            this.capacity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.capacity.ForeColor = System.Drawing.Color.DarkBlue;
+            this.capacity.Location = new System.Drawing.Point(400, 370);
             this.capacity.Name = "capacity";
-            this.capacity.Size = new System.Drawing.Size(68, 19);
+            this.capacity.Size = new System.Drawing.Size(80, 22);
             this.capacity.TabIndex = 21;
             this.capacity.Text = "Capacity";
             // 
             // location
             // 
             this.location.AutoSize = true;
-            this.location.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.location.Location = new System.Drawing.Point(397, 261);
+            this.location.BackColor = System.Drawing.Color.Transparent;
+            this.location.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.location.ForeColor = System.Drawing.Color.DarkBlue;
+            this.location.Location = new System.Drawing.Point(400, 310);
             this.location.Name = "location";
-            this.location.Size = new System.Drawing.Size(70, 19);
+            this.location.Size = new System.Drawing.Size(79, 22);
             this.location.TabIndex = 20;
             this.location.Text = "Location";
             // 
             // venue_name
             // 
             this.venue_name.AutoSize = true;
-            this.venue_name.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.venue_name.Location = new System.Drawing.Point(397, 194);
+            this.venue_name.BackColor = System.Drawing.Color.Transparent;
+            this.venue_name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.venue_name.ForeColor = System.Drawing.Color.DarkBlue;
+            this.venue_name.Location = new System.Drawing.Point(400, 250);
             this.venue_name.Name = "venue_name";
-            this.venue_name.Size = new System.Drawing.Size(94, 19);
+            this.venue_name.Size = new System.Drawing.Size(108, 22);
             this.venue_name.TabIndex = 19;
             this.venue_name.Text = "Venue Name";
             // 
             // deleteVenue
             // 
-            this.deleteVenue.BackColor = System.Drawing.Color.Red;
-            this.deleteVenue.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteVenue.BackColor = System.Drawing.Color.OrangeRed;
+            this.deleteVenue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
+            this.deleteVenue.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteVenue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteVenue.Location = new System.Drawing.Point(423, 419);
+            this.deleteVenue.Location = new System.Drawing.Point(430, 500);
             this.deleteVenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteVenue.Name = "deleteVenue";
             this.deleteVenue.Size = new System.Drawing.Size(85, 47);
@@ -156,10 +171,11 @@
             // 
             // addVenue
             // 
-            this.addVenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.addVenue.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addVenue.BackColor = System.Drawing.Color.LimeGreen;
+            this.addVenue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.addVenue.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addVenue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addVenue.Location = new System.Drawing.Point(655, 419);
+            this.addVenue.Location = new System.Drawing.Point(690, 500);
             this.addVenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addVenue.Name = "addVenue";
             this.addVenue.Size = new System.Drawing.Size(85, 47);
@@ -170,10 +186,11 @@
             // 
             // updateVenue
             // 
-            this.updateVenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.updateVenue.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateVenue.BackColor = System.Drawing.Color.RoyalBlue;
+            this.updateVenue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.updateVenue.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateVenue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.updateVenue.Location = new System.Drawing.Point(542, 419);
+            this.updateVenue.Location = new System.Drawing.Point(560, 500);
             this.updateVenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updateVenue.Name = "updateVenue";
             this.updateVenue.Size = new System.Drawing.Size(85, 47);
@@ -186,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 753);
+            this.ClientSize = new System.Drawing.Size(1682, 803);
             this.Controls.Add(this.updateVenue);
             this.Controls.Add(this.ErrMsg);
             this.Controls.Add(this.label2);
