@@ -15,6 +15,7 @@ namespace EventMgmtServiceLibrary
         private DateTime date;
         private String start_time;
         private String end_time;
+
         public Organizer Organizer { get; set; }
         private int oid;
 

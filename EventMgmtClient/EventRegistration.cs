@@ -116,14 +116,14 @@ namespace EventMgmtClient
             {
                 if (selectedRow != null)
                 {
-                    MessageBox.Show("Don't select row from Table while Adding data");
+                    MessageBox.Show("Don't select row from Table while Adding data.");
                     selectedRow = null;
                 }
                 else
                 {
                     if (cmbevent.SelectedItem == null || cmbpart.SelectedItem == null)
                     {
-                        MessageBox.Show("Please select a Item from Drop Down");
+                        MessageBox.Show("Please select a Item from Drop Down.");
                     }
                     else
                     {
@@ -164,13 +164,13 @@ namespace EventMgmtClient
             {
                 if(selectedRow == null)
                 {
-                    MessageBox.Show("Please select a row to Delete");
+                    MessageBox.Show("Please select a row to Delete.");
                 }
                 else
                 {
                     if (cmbevent.SelectedItem == null || cmbpart.SelectedItem == null)
                     {
-                        MessageBox.Show("Please select a Item from Drop Down");
+                        MessageBox.Show("Please select a Item from Drop Down.");
                     }
                     else
                     {
@@ -207,6 +207,39 @@ namespace EventMgmtClient
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void updateOrganizer_Click(object sender, EventArgs e)
+        {
+            if (selectedRow == null)
+            {
+                MessageBox.Show("Please select a row to Update.");
+            }
+            else
+            {
+                Object selectedPart = cmbpart.SelectedValue;
+                int partID;
+                int.TryParse(selectedPart.ToString(), out partID);
+
+                Object selectedEvent = cmbevent.SelectedValue;
+                int eventID;
+                int.TryParse(selectedEvent.ToString(), out eventID);
+
+
+
+                bool res = client.UpdateRegistration(Convert.ToInt32(selectedRow.Cells[0].Value), partID, eventID, dtpreg_date.Value, (int)nudfees.Value);
+                ShowEventRegistrations();
+                if (res)
+                {
+                    ErrMsg.Text = "Event Registration Updated!!";
+                    ClearTextBoxes();
+                }
+                else
+                {
+                    ErrMsg.Text = "Event Registration Not Updated!!";
+                }
+
             }
         }
     }

@@ -470,6 +470,37 @@ namespace EventMgmtServiceLibrary
 
         }
 
+        public bool UpdateEvent(int eid, string event_name, DateTime date, String start_time, String end_time, int oid, int vid)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"Update event set event_name = @event_name, date = @date, start_time = @start_time, end_time = @end_time, oid = @oid, vid = @vid where eid = @eid",
+                };
+                SqlParameter p1 = new SqlParameter("@event_name", event_name);
+                cmd.Parameters.Add(p1);
+                SqlParameter p2 = new SqlParameter("@date", date);
+                cmd.Parameters.Add(p2);
+                SqlParameter p3 = new SqlParameter("@start_time", start_time);
+                cmd.Parameters.Add(p3);
+                SqlParameter p4 = new SqlParameter("@end_time", end_time);
+                cmd.Parameters.Add(p4);
+                SqlParameter p5 = new SqlParameter("@oid", oid);
+                cmd.Parameters.Add(p5);
+                SqlParameter p6 = new SqlParameter("@vid", vid);
+                cmd.Parameters.Add(p6);
+                SqlParameter p7 = new SqlParameter("eid", eid);
+                cmd.Parameters.Add(p7);
+
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
+
         public bool AddRegistration(int pid, int eid, DateTime reg_date, int fees)
         {
             SqlConnection cnn = new SqlConnection(constr);
@@ -555,5 +586,32 @@ namespace EventMgmtServiceLibrary
                 return rowsAffected > 0;
             }
         }
+
+        public bool UpdateRegistration(int rid, int pid, int eid, DateTime reg_date, int fees)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"Update registration set pid = @pid, eid = @eid, reg_date = @reg_date, fees = @fees where rid = @rid",
+                };
+                SqlParameter p1 = new SqlParameter("@pid", pid);
+                cmd.Parameters.Add(p1);
+                SqlParameter p2 = new SqlParameter("@eid", eid);
+                cmd.Parameters.Add(p2);
+                SqlParameter p3 = new SqlParameter("@reg_date", reg_date);
+                cmd.Parameters.Add(p3);
+                SqlParameter p4 = new SqlParameter("@fees", fees);
+                cmd.Parameters.Add(p4);
+                SqlParameter p5 = new SqlParameter("rid", rid);
+                cmd.Parameters.Add(p5);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
+
     }
 }

@@ -676,6 +676,12 @@ namespace EventMgmtClient.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteEvent", ReplyAction="http://tempuri.org/IService1/DeleteEventResponse")]
         System.Threading.Tasks.Task<bool> DeleteEventAsync(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateEvent", ReplyAction="http://tempuri.org/IService1/UpdateEventResponse")]
+        bool UpdateEvent(int eid, string event_name, System.DateTime date, string start_time, string end_time, int oid, int vid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateEvent", ReplyAction="http://tempuri.org/IService1/UpdateEventResponse")]
+        System.Threading.Tasks.Task<bool> UpdateEventAsync(int eid, string event_name, System.DateTime date, string start_time, string end_time, int oid, int vid);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddRegistration", ReplyAction="http://tempuri.org/IService1/AddRegistrationResponse")]
         bool AddRegistration(int pid, int eid, System.DateTime reg_date, int fees);
         
@@ -699,6 +705,12 @@ namespace EventMgmtClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteRegistration", ReplyAction="http://tempuri.org/IService1/DeleteRegistrationResponse")]
         System.Threading.Tasks.Task<bool> DeleteRegistrationAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateRegistration", ReplyAction="http://tempuri.org/IService1/UpdateRegistrationResponse")]
+        bool UpdateRegistration(int rid, int pid, int eid, System.DateTime reg_date, int fees);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateRegistration", ReplyAction="http://tempuri.org/IService1/UpdateRegistrationResponse")]
+        System.Threading.Tasks.Task<bool> UpdateRegistrationAsync(int rid, int pid, int eid, System.DateTime reg_date, int fees);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -880,6 +892,14 @@ namespace EventMgmtClient.ServiceReference1 {
             return base.Channel.DeleteEventAsync(id);
         }
         
+        public bool UpdateEvent(int eid, string event_name, System.DateTime date, string start_time, string end_time, int oid, int vid) {
+            return base.Channel.UpdateEvent(eid, event_name, date, start_time, end_time, oid, vid);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateEventAsync(int eid, string event_name, System.DateTime date, string start_time, string end_time, int oid, int vid) {
+            return base.Channel.UpdateEventAsync(eid, event_name, date, start_time, end_time, oid, vid);
+        }
+        
         public bool AddRegistration(int pid, int eid, System.DateTime reg_date, int fees) {
             return base.Channel.AddRegistration(pid, eid, reg_date, fees);
         }
@@ -910,6 +930,14 @@ namespace EventMgmtClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> DeleteRegistrationAsync(int id) {
             return base.Channel.DeleteRegistrationAsync(id);
+        }
+        
+        public bool UpdateRegistration(int rid, int pid, int eid, System.DateTime reg_date, int fees) {
+            return base.Channel.UpdateRegistration(rid, pid, eid, reg_date, fees);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateRegistrationAsync(int rid, int pid, int eid, System.DateTime reg_date, int fees) {
+            return base.Channel.UpdateRegistrationAsync(rid, pid, eid, reg_date, fees);
         }
     }
 }

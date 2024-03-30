@@ -117,13 +117,13 @@ namespace EventMgmtClient
             try
             {
                 if(selectedRow == null){
-                    MessageBox.Show("Please select a row to Delete");
+                    MessageBox.Show("Please select a row to Delete.");
                 }
                 else
                 {
                     if(cmborg.SelectedItem == null || cmbvenue.SelectedItem == null)
                     {
-                        MessageBox.Show("Please select a Item from Drop Down");
+                        MessageBox.Show("Please select a Item from Drop Down.");
                     }
                     else {
                         Object selectedOrg = cmborg.SelectedValue;
@@ -175,7 +175,7 @@ namespace EventMgmtClient
                 {
                     if (cmborg.SelectedItem == null || cmbvenue.SelectedItem == null)
                     {
-                        MessageBox.Show("Please select a Item from Drop Down");
+                        MessageBox.Show("Please select a Item from Drop Down.");
                     }
                     else
                     {
@@ -218,6 +218,50 @@ namespace EventMgmtClient
             }
         }
 
+        private void updateEvent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (selectedRow == null)
+                {
+                    MessageBox.Show("Please select a row to Update.");
+                }
+                else
+                {
+                    Object selectedOrg = cmborg.SelectedValue;
+                    int orgID;
+                    int.TryParse(selectedOrg.ToString(), out orgID);
+
+                    Object selectedVenue = cmbvenue.SelectedValue;
+                    int venueID;
+                    int.TryParse(selectedVenue.ToString(), out venueID);
+
+                    if (tbevent_name.Text == "")
+                    {
+                        ErrMsg.Text = "Missing Data!!";
+                    }
+                    else
+                    {
+
+                        bool res = client.UpdateEvent(Convert.ToInt32(selectedRow.Cells[0].Value), tbevent_name.Text, dtpdate.Value, dtpstart_time.Text, dtpend_time.Text, orgID, venueID);
+                        ShowEvents();
+                        if (res)
+                        {
+                            ErrMsg.Text = "Event Updated!!";
+                            ClearTextBoxes();
+                        }
+                        else
+                        {
+                            ErrMsg.Text = "Event Not Updated!!";
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         private void cmborg_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -229,6 +273,7 @@ namespace EventMgmtClient
             */
         }
 
+        
         private void cmbvenue_SelectedIndexChanged(object sender, EventArgs e)
         {
             /*
@@ -259,5 +304,7 @@ namespace EventMgmtClient
             */
 
         }
+
+        
     }
 }

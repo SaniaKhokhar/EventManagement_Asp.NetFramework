@@ -73,6 +73,9 @@ namespace EventMgmtServiceLibrary
         [OperationContract]
         bool DeleteEvent(int id);
 
+        [OperationContract]
+        bool UpdateEvent(int eid, string event_name, DateTime date, String start_time, String end_time, int oid, int vid);
+
         // Event Regitration
         [OperationContract]
         bool AddRegistration(int pid, int eid, DateTime reg_date, int fees);
@@ -85,5 +88,8 @@ namespace EventMgmtServiceLibrary
 
         [OperationContract]
         bool DeleteRegistration(int id);
+
+        [OperationContract]
+        bool UpdateRegistration(int rid, int pid, int eid, DateTime reg_date, int fees);
     }
 }

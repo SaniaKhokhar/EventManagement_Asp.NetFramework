@@ -49,6 +49,7 @@
             this.lbldate = new System.Windows.Forms.Label();
             this.lblvenue = new System.Windows.Forms.Label();
             this.lblorg = new System.Windows.Forms.Label();
+            this.updateEvent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.EventDG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,7 +131,7 @@
             this.deleteEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
             this.deleteEvent.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteEvent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteEvent.Location = new System.Drawing.Point(600, 620);
+            this.deleteEvent.Location = new System.Drawing.Point(480, 620);
             this.deleteEvent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteEvent.Name = "deleteEvent";
             this.deleteEvent.Size = new System.Drawing.Size(85, 47);
@@ -196,6 +197,7 @@
             // 
             // cmborg
             // 
+            this.cmborg.DisplayMember = "OrganizerId";
             this.cmborg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmborg.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmborg.FormattingEnabled = true;
@@ -277,12 +279,28 @@
             this.lblorg.TabIndex = 66;
             this.lblorg.Text = "Organizer";
             // 
+            // updateEvent
+            // 
+            this.updateEvent.BackColor = System.Drawing.Color.RoyalBlue;
+            this.updateEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.updateEvent.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateEvent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.updateEvent.Location = new System.Drawing.Point(595, 620);
+            this.updateEvent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateEvent.Name = "updateEvent";
+            this.updateEvent.Size = new System.Drawing.Size(85, 47);
+            this.updateEvent.TabIndex = 67;
+            this.updateEvent.Text = "Update";
+            this.updateEvent.UseVisualStyleBackColor = false;
+            this.updateEvent.Click += new System.EventHandler(this.updateEvent_Click);
+            // 
             // Events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1682, 803);
+            this.Controls.Add(this.updateEvent);
             this.Controls.Add(this.lblorg);
             this.Controls.Add(this.lblvenue);
             this.Controls.Add(this.lbldate);
@@ -321,6 +339,7 @@
             this.Controls.SetChildIndex(this.lbldate, 0);
             this.Controls.SetChildIndex(this.lblvenue, 0);
             this.Controls.SetChildIndex(this.lblorg, 0);
+            this.Controls.SetChildIndex(this.updateEvent, 0);
             ((System.ComponentModel.ISupportInitialize)(this.EventDG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -346,5 +365,6 @@
         private System.Windows.Forms.Label lbldate;
         private System.Windows.Forms.Label lblvenue;
         private System.Windows.Forms.Label lblorg;
+        private System.Windows.Forms.Button updateEvent;
     }
 }

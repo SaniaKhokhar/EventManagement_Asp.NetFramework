@@ -329,6 +329,26 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="UpdateEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eid" type="xs:int" />
+        <xs:element minOccurs="0" name="event_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="start_time" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="end_time" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oid" type="xs:int" />
+        <xs:element minOccurs="0" name="vid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateEventResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="AddRegistration">
     <xs:complexType>
       <xs:sequence>
@@ -395,6 +415,24 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="DeleteRegistrationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRegistration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rid" type="xs:int" />
+        <xs:element minOccurs="0" name="pid" type="xs:int" />
+        <xs:element minOccurs="0" name="eid" type="xs:int" />
+        <xs:element minOccurs="0" name="reg_date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fees" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRegistrationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateRegistrationResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
