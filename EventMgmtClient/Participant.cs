@@ -118,16 +118,35 @@ namespace EventMgmtClient
             }
         }
 
-        private void btnvenue_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Venue venue = new Venue();
-            venue.ShowDialog();
-        }
+        
 
-        private void tblname_TextChanged(object sender, EventArgs e)
+        private void updateParticipant_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (tbfname.Text == "" || tblname.Text == "" || tbemail.Text == "" || tbmob_no.Text == "")
+                {
+                    ErrMsg.Text = "Missing Data!!";
+                }
+                else
+                {
+                    bool res = client.AddParticipant(tbfname.Text, tblname.Text, Convert.ToInt64(tbmob_no.Text), tbemail.Text);
+                    ShowParticipant();
+                    if (res)
+                    {
+                        ErrMsg.Text = "Participant Added!!";
+                        ClearTextBoxes();
+                    }
+                    else
+                    {
+                        ErrMsg.Text = "Participant Not Added!!";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrMsg.Text = ex.Message;
+            }
         }
     }
 }

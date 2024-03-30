@@ -24,6 +24,9 @@ namespace EventMgmtServiceLibrary
         [OperationContract]
         bool DeleteParticipant(int id);
 
+        [OperationContract]
+        bool UpdateParticipant(int pid, string fname, string lname, long mob_no, string email);
+
         //Venue services
         [OperationContract]
         bool AddVenue(string venue_name, string location, int capacity);
@@ -37,6 +40,8 @@ namespace EventMgmtServiceLibrary
         [OperationContract]
         bool DeleteVenue(int id);
 
+        [OperationContract]
+        bool UpdateVenue(int vid, string venue_name, string location, int capacity);
         //Organizer services
         [OperationContract]
         bool AddOrganizer(string org_name, long org_contact, string org_email);
@@ -48,6 +53,9 @@ namespace EventMgmtServiceLibrary
 
         [OperationContract]
         bool DeleteOrganizer(int id);
+
+        [OperationContract]
+        bool UpdateOrganizer(int oid, string org_name, long org_contact, string org_email);
 
         //Event services
         [OperationContract]

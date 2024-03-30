@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Runtime.Serialization;
+using System.Security.Cryptography;
 using System.ServiceModel;
 using System.Text;
 using System.Xml.Linq;
@@ -138,6 +139,33 @@ namespace EventMgmtServiceLibrary
             }
         }
 
+        public bool UpdateParticipant(int pid, string fname, string lname, long mob_no, string email)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"Update participant set fname = @fname,lname = @lname, mob_no = @mob_no, email = @email where pid = @pid",
+                };
+                SqlParameter p1 = new SqlParameter("@fname", fname);
+                cmd.Parameters.Add(p1);
+                SqlParameter p2 = new SqlParameter("@lname", lname);
+                cmd.Parameters.Add(p2);
+                SqlParameter p3 = new SqlParameter("@mob_no", mob_no);
+                cmd.Parameters.Add(p3);
+                SqlParameter p4 = new SqlParameter("@email", email);
+                cmd.Parameters.Add(p4);
+                SqlParameter p5 = new SqlParameter("@pid", pid);
+                cmd.Parameters.Add(p5);
+
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+
+        }
         //Venues 
         public bool AddVenue(string venue_name, string location, int capacity)
         {
@@ -155,14 +183,14 @@ namespace EventMgmtServiceLibrary
                 cmd.Parameters.Add(p2);
                 SqlParameter p3 = new SqlParameter("@capacity", capacity);
                 cmd.Parameters.Add(p3);
-             
+
                 int rowsAffected = cmd.ExecuteNonQuery();
                 return rowsAffected > 0;
             }
         }
         public DataSet GetVenues()
         {
-        //throw new NotImplementedException();
+            //throw new NotImplementedException();
             string query = "SELECT vid as Id, venue_name as Venue_Name, location as Location, capacity as Capacity FROM venue";
             SqlDataAdapter da = new SqlDataAdapter(query, constr);
             DataSet ds = new DataSet();
@@ -216,9 +244,34 @@ namespace EventMgmtServiceLibrary
             }
             //throw new NotImplementedException();
         }
-        
-       public bool AddOrganizer(string org_name, long org_contact, string org_email)
+
+        public bool UpdateVenue(int vid, string venue_name, string location, int capacity)
         {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"Update venue set venue_name = @venue_name,location = @location, capacity = @capacity where vid = @vid",
+                };
+                SqlParameter p1 = new SqlParameter("@venue_name", venue_name);
+                cmd.Parameters.Add(p1);
+                SqlParameter p2 = new SqlParameter("@location", location);
+                cmd.Parameters.Add(p2);
+                SqlParameter p3 = new SqlParameter("@capacity", capacity);
+                cmd.Parameters.Add(p3);
+                SqlParameter p4 = new SqlParameter("@vid", vid);
+                cmd.Parameters.Add(p4);
+                
+
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
+       public bool AddOrganizer(string org_name, long org_contact, string org_email)
+       {
             SqlConnection cnn = new SqlConnection(constr);
             {
                 cnn.Open();
@@ -299,6 +352,30 @@ namespace EventMgmtServiceLibrary
 
         }
 
+        public bool UpdateOrganizer(int oid, string org_name, long org_contact, string org_email)
+        {
+            SqlConnection cnn = new SqlConnection(constr);
+            {
+                cnn.Open();
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = cnn,
+                    CommandText = @"Update organizer set org_name = @org_name, org_contact = @org_contact, org_email = @org_email where oid = @oid",
+                };
+                SqlParameter p1 = new SqlParameter("@org_name", org_name);
+                cmd.Parameters.Add(p1);
+                SqlParameter p2 = new SqlParameter("@org_contact", org_contact);
+                cmd.Parameters.Add(p2);
+                SqlParameter p3 = new SqlParameter("@org_email", org_email);
+                cmd.Parameters.Add(p3);               
+                SqlParameter p4 = new SqlParameter("@oid", oid);
+                cmd.Parameters.Add(p4);
+
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
         public bool AddEvent(string event_name, DateTime date, string start_time, string end_time, int oid, int vid)
         {
             SqlConnection cnn = new SqlConnection(constr);

@@ -46,6 +46,7 @@
             this.organizerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.organizerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.organizerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.updateParticipant = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ParticipantDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.organizerBindingSource)).BeginInit();
@@ -58,10 +59,10 @@
             this.addParticipant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.addParticipant.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addParticipant.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addParticipant.Location = new System.Drawing.Point(565, 440);
+            this.addParticipant.Location = new System.Drawing.Point(636, 550);
             this.addParticipant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addParticipant.Name = "addParticipant";
-            this.addParticipant.Size = new System.Drawing.Size(85, 47);
+            this.addParticipant.Size = new System.Drawing.Size(96, 59);
             this.addParticipant.TabIndex = 0;
             this.addParticipant.Text = "Add";
             this.addParticipant.UseVisualStyleBackColor = false;
@@ -72,10 +73,10 @@
             this.deleteParticipant.BackColor = System.Drawing.Color.Red;
             this.deleteParticipant.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteParticipant.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteParticipant.Location = new System.Drawing.Point(354, 440);
+            this.deleteParticipant.Location = new System.Drawing.Point(398, 550);
             this.deleteParticipant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteParticipant.Name = "deleteParticipant";
-            this.deleteParticipant.Size = new System.Drawing.Size(85, 47);
+            this.deleteParticipant.Size = new System.Drawing.Size(96, 59);
             this.deleteParticipant.TabIndex = 1;
             this.deleteParticipant.Text = "Delete";
             this.deleteParticipant.UseVisualStyleBackColor = false;
@@ -85,9 +86,9 @@
             // 
             this.fname.AutoSize = true;
             this.fname.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fname.Location = new System.Drawing.Point(350, 200);
+            this.fname.Location = new System.Drawing.Point(394, 250);
             this.fname.Name = "fname";
-            this.fname.Size = new System.Drawing.Size(85, 19);
+            this.fname.Size = new System.Drawing.Size(98, 22);
             this.fname.TabIndex = 3;
             this.fname.Text = "First Name";
             // 
@@ -95,9 +96,9 @@
             // 
             this.lname.AutoSize = true;
             this.lname.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lname.Location = new System.Drawing.Point(350, 250);
+            this.lname.Location = new System.Drawing.Point(394, 312);
             this.lname.Name = "lname";
-            this.lname.Size = new System.Drawing.Size(82, 19);
+            this.lname.Size = new System.Drawing.Size(94, 22);
             this.lname.TabIndex = 4;
             this.lname.Text = "Last Name";
             // 
@@ -105,9 +106,9 @@
             // 
             this.email.AutoSize = true;
             this.email.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email.Location = new System.Drawing.Point(350, 300);
+            this.email.Location = new System.Drawing.Point(394, 375);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(49, 19);
+            this.email.Size = new System.Drawing.Size(57, 22);
             this.email.TabIndex = 5;
             this.email.Text = "Email";
             // 
@@ -115,55 +116,54 @@
             // 
             this.mob_no.AutoSize = true;
             this.mob_no.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mob_no.Location = new System.Drawing.Point(350, 350);
+            this.mob_no.Location = new System.Drawing.Point(394, 438);
             this.mob_no.Name = "mob_no";
-            this.mob_no.Size = new System.Drawing.Size(118, 19);
+            this.mob_no.Size = new System.Drawing.Size(136, 22);
             this.mob_no.TabIndex = 6;
             this.mob_no.Text = "Mobile Number";
             // 
             // tbfname
             // 
-            this.tbfname.Location = new System.Drawing.Point(500, 200);
+            this.tbfname.Location = new System.Drawing.Point(562, 250);
             this.tbfname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbfname.Name = "tbfname";
-            this.tbfname.Size = new System.Drawing.Size(150, 22);
+            this.tbfname.Size = new System.Drawing.Size(168, 26);
             this.tbfname.TabIndex = 7;
             // 
             // tblname
             // 
-            this.tblname.Location = new System.Drawing.Point(500, 250);
+            this.tblname.Location = new System.Drawing.Point(562, 312);
             this.tblname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tblname.Name = "tblname";
-            this.tblname.Size = new System.Drawing.Size(150, 22);
+            this.tblname.Size = new System.Drawing.Size(168, 26);
             this.tblname.TabIndex = 8;
-            this.tblname.TextChanged += new System.EventHandler(this.tblname_TextChanged);
             // 
             // tbemail
             // 
-            this.tbemail.Location = new System.Drawing.Point(500, 300);
+            this.tbemail.Location = new System.Drawing.Point(562, 375);
             this.tbemail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbemail.Name = "tbemail";
-            this.tbemail.Size = new System.Drawing.Size(150, 22);
+            this.tbemail.Size = new System.Drawing.Size(168, 26);
             this.tbemail.TabIndex = 9;
             // 
             // tbmob_no
             // 
-            this.tbmob_no.Location = new System.Drawing.Point(500, 350);
+            this.tbmob_no.Location = new System.Drawing.Point(562, 438);
             this.tbmob_no.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbmob_no.Name = "tbmob_no";
-            this.tbmob_no.Size = new System.Drawing.Size(150, 22);
+            this.tbmob_no.Size = new System.Drawing.Size(168, 26);
             this.tbmob_no.TabIndex = 10;
             // 
             // ParticipantDG
             // 
             this.ParticipantDG.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ParticipantDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ParticipantDG.Location = new System.Drawing.Point(750, 200);
+            this.ParticipantDG.Location = new System.Drawing.Point(844, 250);
             this.ParticipantDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ParticipantDG.Name = "ParticipantDG";
             this.ParticipantDG.RowHeadersWidth = 62;
             this.ParticipantDG.RowTemplate.Height = 28;
-            this.ParticipantDG.Size = new System.Drawing.Size(800, 400);
+            this.ParticipantDG.Size = new System.Drawing.Size(900, 500);
             this.ParticipantDG.TabIndex = 11;
             this.ParticipantDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Participant_CellClick);
             // 
@@ -176,18 +176,18 @@
             // 
             this.lblpart.AutoSize = true;
             this.lblpart.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpart.Location = new System.Drawing.Point(348, 134);
+            this.lblpart.Location = new System.Drawing.Point(392, 168);
             this.lblpart.Name = "lblpart";
-            this.lblpart.Size = new System.Drawing.Size(132, 31);
+            this.lblpart.Size = new System.Drawing.Size(153, 36);
             this.lblpart.TabIndex = 13;
             this.lblpart.Text = "Participant";
             // 
             // ErrMsg
             // 
             this.ErrMsg.AutoSize = true;
-            this.ErrMsg.Location = new System.Drawing.Point(441, 585);
+            this.ErrMsg.Location = new System.Drawing.Point(496, 731);
             this.ErrMsg.Name = "ErrMsg";
-            this.ErrMsg.Size = new System.Drawing.Size(0, 16);
+            this.ErrMsg.Size = new System.Drawing.Size(0, 20);
             this.ErrMsg.TabIndex = 14;
             // 
             // organizerBindingSource
@@ -202,11 +202,26 @@
             // 
             this.organizerBindingSource2.DataSource = typeof(EventMgmtClient.ServiceReference1.Organizer);
             // 
+            // updateParticipant
+            // 
+            this.updateParticipant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.updateParticipant.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateParticipant.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.updateParticipant.Location = new System.Drawing.Point(519, 625);
+            this.updateParticipant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateParticipant.Name = "updateParticipant";
+            this.updateParticipant.Size = new System.Drawing.Size(96, 59);
+            this.updateParticipant.TabIndex = 40;
+            this.updateParticipant.Text = "Update";
+            this.updateParticipant.UseVisualStyleBackColor = false;
+            this.updateParticipant.Click += new System.EventHandler(this.updateParticipant_Click);
+            // 
             // Participant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 753);
+            this.ClientSize = new System.Drawing.Size(1667, 941);
+            this.Controls.Add(this.updateParticipant);
             this.Controls.Add(this.ErrMsg);
             this.Controls.Add(this.lblpart);
             this.Controls.Add(this.ParticipantDG);
@@ -238,6 +253,7 @@
             this.Controls.SetChildIndex(this.ParticipantDG, 0);
             this.Controls.SetChildIndex(this.lblpart, 0);
             this.Controls.SetChildIndex(this.ErrMsg, 0);
+            this.Controls.SetChildIndex(this.updateParticipant, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ParticipantDG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.organizerBindingSource)).EndInit();
@@ -272,6 +288,7 @@
         private System.Windows.Forms.BindingSource organizerBindingSource;
         private System.Windows.Forms.BindingSource organizerBindingSource2;
         private System.Windows.Forms.BindingSource organizerBindingSource1;
+        private System.Windows.Forms.Button updateParticipant;
     }
 }
 
