@@ -55,7 +55,7 @@
             this.lblpart.BackColor = System.Drawing.Color.Transparent;
             this.lblpart.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpart.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblpart.Location = new System.Drawing.Point(287, 378);
+            this.lblpart.Location = new System.Drawing.Point(181, 414);
             this.lblpart.Name = "lblpart";
             this.lblpart.Size = new System.Drawing.Size(117, 27);
             this.lblpart.TabIndex = 40;
@@ -68,7 +68,7 @@
             this.cmbpart.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbpart.FormattingEnabled = true;
             this.cmbpart.ItemHeight = 25;
-            this.cmbpart.Location = new System.Drawing.Point(512, 378);
+            this.cmbpart.Location = new System.Drawing.Point(406, 414);
             this.cmbpart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbpart.Name = "cmbpart";
             this.cmbpart.Size = new System.Drawing.Size(391, 33);
@@ -79,7 +79,7 @@
             this.cmbevent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbevent.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbevent.FormattingEnabled = true;
-            this.cmbevent.Location = new System.Drawing.Point(512, 454);
+            this.cmbevent.Location = new System.Drawing.Point(406, 490);
             this.cmbevent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbevent.Name = "cmbevent";
             this.cmbevent.Size = new System.Drawing.Size(224, 33);
@@ -88,7 +88,7 @@
             // dtpreg_date
             // 
             this.dtpreg_date.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpreg_date.Location = new System.Drawing.Point(512, 528);
+            this.dtpreg_date.Location = new System.Drawing.Point(406, 564);
             this.dtpreg_date.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpreg_date.Name = "dtpreg_date";
             this.dtpreg_date.Size = new System.Drawing.Size(224, 33);
@@ -101,7 +101,7 @@
             this.addEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.addEvent.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEvent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addEvent.Location = new System.Drawing.Point(641, 704);
+            this.addEvent.Location = new System.Drawing.Point(535, 740);
             this.addEvent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addEvent.Name = "addEvent";
             this.addEvent.Size = new System.Drawing.Size(96, 59);
@@ -116,7 +116,7 @@
             this.deleteEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
             this.deleteEvent.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteEvent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteEvent.Location = new System.Drawing.Point(343, 704);
+            this.deleteEvent.Location = new System.Drawing.Point(237, 740);
             this.deleteEvent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteEvent.Name = "deleteEvent";
             this.deleteEvent.Size = new System.Drawing.Size(96, 59);
@@ -145,7 +145,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.RegDG.DefaultCellStyle = dataGridViewCellStyle2;
-            this.RegDG.Location = new System.Drawing.Point(952, 379);
+            this.RegDG.Location = new System.Drawing.Point(846, 415);
             this.RegDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegDG.Name = "RegDG";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -158,7 +158,7 @@
             this.RegDG.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.RegDG.RowHeadersWidth = 62;
             this.RegDG.RowTemplate.Height = 28;
-            this.RegDG.Size = new System.Drawing.Size(717, 459);
+            this.RegDG.Size = new System.Drawing.Size(895, 459);
             this.RegDG.TabIndex = 59;
             this.RegDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RegDG_CellClick);
             // 
@@ -168,7 +168,7 @@
             this.ErrMsg.BackColor = System.Drawing.Color.Transparent;
             this.ErrMsg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrMsg.ForeColor = System.Drawing.Color.Crimson;
-            this.ErrMsg.Location = new System.Drawing.Point(356, 812);
+            this.ErrMsg.Location = new System.Drawing.Point(250, 848);
             this.ErrMsg.Name = "ErrMsg";
             this.ErrMsg.Size = new System.Drawing.Size(0, 26);
             this.ErrMsg.TabIndex = 60;
@@ -176,7 +176,7 @@
             // nudfees
             // 
             this.nudfees.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudfees.Location = new System.Drawing.Point(512, 604);
+            this.nudfees.Location = new System.Drawing.Point(406, 640);
             this.nudfees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudfees.Maximum = new decimal(new int[] {
             10000,
@@ -193,7 +193,7 @@
             this.label2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(729, 240);
+            this.label2.Location = new System.Drawing.Point(818, 316);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(302, 41);
             this.label2.TabIndex = 62;
@@ -205,7 +205,7 @@
             this.lblevent.BackColor = System.Drawing.Color.Transparent;
             this.lblevent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblevent.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblevent.Location = new System.Drawing.Point(287, 454);
+            this.lblevent.Location = new System.Drawing.Point(181, 490);
             this.lblevent.Name = "lblevent";
             this.lblevent.Size = new System.Drawing.Size(69, 27);
             this.lblevent.TabIndex = 63;
@@ -217,7 +217,7 @@
             this.lblreg_date.BackColor = System.Drawing.Color.Transparent;
             this.lblreg_date.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblreg_date.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblreg_date.Location = new System.Drawing.Point(287, 528);
+            this.lblreg_date.Location = new System.Drawing.Point(181, 564);
             this.lblreg_date.Name = "lblreg_date";
             this.lblreg_date.Size = new System.Drawing.Size(180, 27);
             this.lblreg_date.TabIndex = 64;
@@ -229,7 +229,7 @@
             this.lblfees.BackColor = System.Drawing.Color.Transparent;
             this.lblfees.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfees.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblfees.Location = new System.Drawing.Point(287, 604);
+            this.lblfees.Location = new System.Drawing.Point(181, 640);
             this.lblfees.Name = "lblfees";
             this.lblfees.Size = new System.Drawing.Size(56, 27);
             this.lblfees.TabIndex = 65;
@@ -240,7 +240,7 @@
             this.updateOrganizer.BackColor = System.Drawing.Color.RoyalBlue;
             this.updateOrganizer.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateOrganizer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.updateOrganizer.Location = new System.Drawing.Point(495, 704);
+            this.updateOrganizer.Location = new System.Drawing.Point(389, 740);
             this.updateOrganizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updateOrganizer.Name = "updateOrganizer";
             this.updateOrganizer.Size = new System.Drawing.Size(96, 59);

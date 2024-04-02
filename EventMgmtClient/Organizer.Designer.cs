@@ -61,7 +61,7 @@
             this.label2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(781, 244);
+            this.label2.Location = new System.Drawing.Point(884, 294);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 41);
             this.label2.TabIndex = 44;
