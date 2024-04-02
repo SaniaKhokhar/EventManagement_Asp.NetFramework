@@ -50,7 +50,7 @@
             this.ErrMsg.BackColor = System.Drawing.Color.Transparent;
             this.ErrMsg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrMsg.ForeColor = System.Drawing.Color.Crimson;
-            this.ErrMsg.Location = new System.Drawing.Point(427, 776);
+            this.ErrMsg.Location = new System.Drawing.Point(427, 881);
             this.ErrMsg.Name = "ErrMsg";
             this.ErrMsg.Size = new System.Drawing.Size(0, 26);
             this.ErrMsg.TabIndex = 45;
@@ -61,7 +61,7 @@
             this.label2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(884, 294);
+            this.label2.Location = new System.Drawing.Point(882, 328);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 41);
             this.label2.TabIndex = 44;
@@ -79,19 +79,19 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.OrganizerDG.DefaultCellStyle = dataGridViewCellStyle1;
-            this.OrganizerDG.Location = new System.Drawing.Point(959, 361);
+            this.OrganizerDG.Location = new System.Drawing.Point(959, 466);
             this.OrganizerDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OrganizerDG.Name = "OrganizerDG";
             this.OrganizerDG.RowHeadersWidth = 62;
             this.OrganizerDG.RowTemplate.Height = 28;
-            this.OrganizerDG.Size = new System.Drawing.Size(680, 501);
+            this.OrganizerDG.Size = new System.Drawing.Size(744, 501);
             this.OrganizerDG.TabIndex = 42;
             this.OrganizerDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrganizerDG_CellClick);
             // 
             // tbcontactno
             // 
             this.tbcontactno.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbcontactno.Location = new System.Drawing.Point(596, 464);
+            this.tbcontactno.Location = new System.Drawing.Point(596, 569);
             this.tbcontactno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbcontactno.Name = "tbcontactno";
             this.tbcontactno.Size = new System.Drawing.Size(196, 32);
@@ -103,7 +103,7 @@
             this.org_email.BackColor = System.Drawing.Color.Transparent;
             this.org_email.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.org_email.ForeColor = System.Drawing.Color.DarkBlue;
-            this.org_email.Location = new System.Drawing.Point(371, 538);
+            this.org_email.Location = new System.Drawing.Point(371, 643);
             this.org_email.Name = "org_email";
             this.org_email.Size = new System.Drawing.Size(68, 27);
             this.org_email.TabIndex = 38;
@@ -115,7 +115,7 @@
             this.org_contact.BackColor = System.Drawing.Color.Transparent;
             this.org_contact.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.org_contact.ForeColor = System.Drawing.Color.DarkBlue;
-            this.org_contact.Location = new System.Drawing.Point(371, 464);
+            this.org_contact.Location = new System.Drawing.Point(371, 569);
             this.org_contact.Name = "org_contact";
             this.org_contact.Size = new System.Drawing.Size(121, 27);
             this.org_contact.TabIndex = 37;
@@ -127,7 +127,7 @@
             this.org_name.BackColor = System.Drawing.Color.Transparent;
             this.org_name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.org_name.ForeColor = System.Drawing.Color.DarkBlue;
-            this.org_name.Location = new System.Drawing.Point(371, 388);
+            this.org_name.Location = new System.Drawing.Point(371, 493);
             this.org_name.Name = "org_name";
             this.org_name.Size = new System.Drawing.Size(106, 27);
             this.org_name.TabIndex = 36;
@@ -139,7 +139,7 @@
             this.deleteOrganizer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
             this.deleteOrganizer.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteOrganizer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteOrganizer.Location = new System.Drawing.Point(427, 651);
+            this.deleteOrganizer.Location = new System.Drawing.Point(427, 756);
             this.deleteOrganizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteOrganizer.Name = "deleteOrganizer";
             this.deleteOrganizer.Size = new System.Drawing.Size(96, 59);
@@ -153,7 +153,7 @@
             this.addOrganizer.BackColor = System.Drawing.Color.LimeGreen;
             this.addOrganizer.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addOrganizer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addOrganizer.Location = new System.Drawing.Point(697, 651);
+            this.addOrganizer.Location = new System.Drawing.Point(697, 756);
             this.addOrganizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addOrganizer.Name = "addOrganizer";
             this.addOrganizer.Size = new System.Drawing.Size(96, 59);
@@ -167,7 +167,7 @@
             this.updateOrganizer.BackColor = System.Drawing.Color.RoyalBlue;
             this.updateOrganizer.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateOrganizer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.updateOrganizer.Location = new System.Drawing.Point(562, 651);
+            this.updateOrganizer.Location = new System.Drawing.Point(562, 756);
             this.updateOrganizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updateOrganizer.Name = "updateOrganizer";
             this.updateOrganizer.Size = new System.Drawing.Size(96, 59);
@@ -179,7 +179,7 @@
             // tborgname
             // 
             this.tborgname.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tborgname.Location = new System.Drawing.Point(596, 388);
+            this.tborgname.Location = new System.Drawing.Point(596, 493);
             this.tborgname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tborgname.Name = "tborgname";
             this.tborgname.Size = new System.Drawing.Size(196, 32);
@@ -188,7 +188,7 @@
             // tbemail
             // 
             this.tbemail.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbemail.Location = new System.Drawing.Point(596, 538);
+            this.tbemail.Location = new System.Drawing.Point(596, 643);
             this.tbemail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(196, 32);
