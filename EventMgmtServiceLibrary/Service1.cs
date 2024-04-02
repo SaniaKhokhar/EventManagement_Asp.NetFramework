@@ -492,7 +492,7 @@ namespace EventMgmtServiceLibrary
                 cmd.Parameters.Add(p5);
                 SqlParameter p6 = new SqlParameter("@vid", vid);
                 cmd.Parameters.Add(p6);
-                SqlParameter p7 = new SqlParameter("eid", eid);
+                SqlParameter p7 = new SqlParameter("@eid", eid);
                 cmd.Parameters.Add(p7);
 
 
@@ -605,7 +605,7 @@ namespace EventMgmtServiceLibrary
                 cmd.Parameters.Add(p3);
                 SqlParameter p4 = new SqlParameter("@fees", fees);
                 cmd.Parameters.Add(p4);
-                SqlParameter p5 = new SqlParameter("rid", rid);
+                SqlParameter p5 = new SqlParameter("@rid", rid);
                 cmd.Parameters.Add(p5);
 
                 int rowsAffected = cmd.ExecuteNonQuery();

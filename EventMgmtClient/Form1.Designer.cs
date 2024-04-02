@@ -41,10 +41,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.SkyBlue;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(750, 40);
+            this.label1.Location = new System.Drawing.Point(639, 25);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(10);
-            this.label1.Size = new System.Drawing.Size(440, 62);
+            this.label1.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
+            this.label1.Size = new System.Drawing.Size(515, 75);
             this.label1.TabIndex = 33;
             this.label1.Text = "Event Management System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -54,11 +54,11 @@
             this.btnorganizer.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnorganizer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnorganizer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnorganizer.Location = new System.Drawing.Point(60, 400);
+            this.btnorganizer.Location = new System.Drawing.Point(763, 132);
             this.btnorganizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnorganizer.Name = "btnorganizer";
-            this.btnorganizer.Padding = new System.Windows.Forms.Padding(5);
-            this.btnorganizer.Size = new System.Drawing.Size(200, 50);
+            this.btnorganizer.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnorganizer.Size = new System.Drawing.Size(225, 62);
             this.btnorganizer.TabIndex = 32;
             this.btnorganizer.Text = "Organizer";
             this.btnorganizer.UseVisualStyleBackColor = false;
@@ -69,11 +69,11 @@
             this.btnvenue.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnvenue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnvenue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvenue.Location = new System.Drawing.Point(60, 300);
+            this.btnvenue.Location = new System.Drawing.Point(447, 132);
             this.btnvenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnvenue.Name = "btnvenue";
-            this.btnvenue.Padding = new System.Windows.Forms.Padding(5);
-            this.btnvenue.Size = new System.Drawing.Size(200, 50);
+            this.btnvenue.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnvenue.Size = new System.Drawing.Size(225, 62);
             this.btnvenue.TabIndex = 36;
             this.btnvenue.Text = "Venue";
             this.btnvenue.UseVisualStyleBackColor = false;
@@ -84,11 +84,11 @@
             this.btnreg.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnreg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnreg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreg.Location = new System.Drawing.Point(60, 600);
+            this.btnreg.Location = new System.Drawing.Point(1366, 132);
             this.btnreg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnreg.Name = "btnreg";
-            this.btnreg.Padding = new System.Windows.Forms.Padding(5);
-            this.btnreg.Size = new System.Drawing.Size(200, 50);
+            this.btnreg.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnreg.Size = new System.Drawing.Size(225, 62);
             this.btnreg.TabIndex = 37;
             this.btnreg.Text = "Event Registration";
             this.btnreg.UseVisualStyleBackColor = false;
@@ -99,11 +99,11 @@
             this.btnevent.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnevent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnevent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnevent.Location = new System.Drawing.Point(60, 500);
+            this.btnevent.Location = new System.Drawing.Point(1076, 132);
             this.btnevent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnevent.Name = "btnevent";
-            this.btnevent.Padding = new System.Windows.Forms.Padding(5);
-            this.btnevent.Size = new System.Drawing.Size(200, 50);
+            this.btnevent.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnevent.Size = new System.Drawing.Size(225, 62);
             this.btnevent.TabIndex = 38;
             this.btnevent.Text = "Event";
             this.btnevent.UseVisualStyleBackColor = false;
@@ -114,11 +114,11 @@
             this.btparticipant.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btparticipant.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btparticipant.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btparticipant.Location = new System.Drawing.Point(60, 197);
+            this.btparticipant.Location = new System.Drawing.Point(120, 132);
             this.btparticipant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btparticipant.Name = "btparticipant";
-            this.btparticipant.Padding = new System.Windows.Forms.Padding(5);
-            this.btparticipant.Size = new System.Drawing.Size(200, 50);
+            this.btparticipant.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btparticipant.Size = new System.Drawing.Size(225, 62);
             this.btparticipant.TabIndex = 39;
             this.btparticipant.Text = "Participant";
             this.btparticipant.UseVisualStyleBackColor = false;
@@ -126,12 +126,12 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.BackgroundImage = global::EventMgmtClient.Properties.Resources.smooth_background_by_the_dogfather_d25z704_pre;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1682, 803);
+            this.ClientSize = new System.Drawing.Size(1737, 850);
             this.Controls.Add(this.btparticipant);
             this.Controls.Add(this.btnevent);
             this.Controls.Add(this.btnreg);
