@@ -168,7 +168,7 @@
             this.ErrMsg.BackColor = System.Drawing.Color.Transparent;
             this.ErrMsg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrMsg.ForeColor = System.Drawing.Color.Crimson;
-            this.ErrMsg.Location = new System.Drawing.Point(250, 848);
+            this.ErrMsg.Location = new System.Drawing.Point(333, 848);
             this.ErrMsg.Name = "ErrMsg";
             this.ErrMsg.Size = new System.Drawing.Size(0, 26);
             this.ErrMsg.TabIndex = 60;

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ErrMsg = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.VenueDG = new System.Windows.Forms.DataGridView();
@@ -50,7 +50,7 @@
             this.ErrMsg.BackColor = System.Drawing.Color.Transparent;
             this.ErrMsg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrMsg.ForeColor = System.Drawing.Color.Crimson;
-            this.ErrMsg.Location = new System.Drawing.Point(374, 801);
+            this.ErrMsg.Location = new System.Drawing.Point(455, 917);
             this.ErrMsg.Name = "ErrMsg";
             this.ErrMsg.Size = new System.Drawing.Size(0, 26);
             this.ErrMsg.TabIndex = 30;
@@ -71,14 +71,14 @@
             // 
             this.VenueDG.BackgroundColor = System.Drawing.Color.LightCyan;
             this.VenueDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.VenueDG.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.VenueDG.DefaultCellStyle = dataGridViewCellStyle1;
             this.VenueDG.Location = new System.Drawing.Point(836, 468);
             this.VenueDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VenueDG.Name = "VenueDG";
@@ -161,7 +161,7 @@
             this.deleteVenue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
             this.deleteVenue.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteVenue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.deleteVenue.Location = new System.Drawing.Point(336, 803);
+            this.deleteVenue.Location = new System.Drawing.Point(340, 803);
             this.deleteVenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteVenue.Name = "deleteVenue";
             this.deleteVenue.Size = new System.Drawing.Size(96, 59);
@@ -204,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1750, 902);
+            this.ClientSize = new System.Drawing.Size(1785, 940);
             this.Controls.Add(this.updateVenue);
             this.Controls.Add(this.ErrMsg);
             this.Controls.Add(this.label2);

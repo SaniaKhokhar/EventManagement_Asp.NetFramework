@@ -170,7 +170,7 @@
             this.ErrMsg.BackColor = System.Drawing.Color.Transparent;
             this.ErrMsg.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrMsg.ForeColor = System.Drawing.Color.Crimson;
-            this.ErrMsg.Location = new System.Drawing.Point(446, 859);
+            this.ErrMsg.Location = new System.Drawing.Point(412, 954);
             this.ErrMsg.Name = "ErrMsg";
             this.ErrMsg.Size = new System.Drawing.Size(0, 26);
             this.ErrMsg.TabIndex = 56;
@@ -289,7 +289,7 @@
             this.updateEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
             this.updateEvent.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateEvent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.updateEvent.Location = new System.Drawing.Point(411, 863);
+            this.updateEvent.Location = new System.Drawing.Point(406, 863);
             this.updateEvent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updateEvent.Name = "updateEvent";
             this.updateEvent.Size = new System.Drawing.Size(96, 59);
@@ -303,7 +303,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(1748, 901);
+            this.ClientSize = new System.Drawing.Size(1750, 901);
             this.Controls.Add(this.updateEvent);
             this.Controls.Add(this.lblorg);
             this.Controls.Add(this.lblvenue);
